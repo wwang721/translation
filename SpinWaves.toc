@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}介绍}{1}{section.1}
+\contentsline {section}{\numberline {2}自旋-偏差量子数}{3}{section.2}
+\contentsline {section}{\numberline {3}铁磁体的简谐近似}{4}{section.3}
+\contentsline {section}{\numberline {4}自旋波近似下铁磁质的磁化强度和比热}{6}{section.4}
+\contentsline {section}{\numberline {5}偶极结构相互作用的影响}{7}{section.5}
+\contentsline {section}{\numberline {6}铁磁共振吸收的自旋波理论}{9}{section.6}
+\contentsline {section}{\numberline {7}反铁磁的简谐近似}{10}{section.7}
+\contentsline {section}{\numberline {8}自旋波近似下的反铁磁基态}{12}{section.8}
+\contentsline {section}{\numberline {9}铁氧体的简谐近似}{14}{section.9}
+\contentsline {section}{\numberline {10}自旋-弛豫过程的简谐振子模型}{15}{section.10}
+\contentsline {section}{\numberline {11}海特勒-伦敦（Heitler-London）模型以外的自旋波理论的有效性问题}{15}{section.11}

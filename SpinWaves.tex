@@ -1,0 +1,807 @@
+\documentclass{article}
+\usepackage{braket}
+\usepackage{ctex}%add Chinese supports
+\usepackage{upgreek}%add special greek symbols
+\usepackage{graphicx}%include figure files
+\usepackage{wrapfig}
+\usepackage{subfigure}
+\usepackage{amsmath}%add special math symbols
+\usepackage{amssymb}
+\usepackage{bm}%bold math
+%\usepackage{xfrac}%add special fraction supports
+\usepackage{color}
+\usepackage[colorlinks, 
+linkcolor=black,
+anchorcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}% add hypertext capabilities
+\usepackage{geometry}
+\geometry{a4paper, centering, scale=0.75}
+
+%
+%  Created by WW on 11/27/19
+%  Copyright © WW. All rights reserved.
+%
+\usepackage[subfigure]{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} 
+
+\begin{document}\zihao{5}
+
+\title{{\vspace{-80pt}\normalsize 现代物理评论}~\\\textbf{自旋波}}
+\author{范克兰东克（J. Van Kranendonk），范弗莱克（J. H. Van Vleck）~\\哈佛大学，剑桥市，马塞诸塞州}
+\date{卷30，第一期 \hfill 一月，1958}
+\maketitle
+
+{\vspace{-53pt}\centerline{——————————————————————————————————————————————}}
+{\vspace{4pt}\centerline{——————————————————————————————————————————————}}
+
+\vspace{0pt}
+\tableofcontents
+
+{\vspace{15pt}\centerline{——————————}\vspace{-10pt}}
+
+%%===========================================================
+%%===========================================================
+
+\section{介绍} \label{sec:1}
+
+如何去计算一个铁磁、反铁磁或者铁氧体材料中的磁化强度是一个十分复杂的问题，以至于总是需要采用某种近似。在居里温度以上，配分函数可以展开为交换积分与$kT$之比的幂级数，但是收敛速度非常慢，而且每个后续项的计算难度越来越大。外斯（Weiss）分子场或其衍生方法提供了一种半经验半理论的方式来解决问题，而且如果只作定性考虑，即使在低于居里温度的情况下这种方法也是有效的。外斯-贝特-皮尔斯（Weiss-Bethe-Peierls）方法可以看作是外斯分子场方法的改进，其中群集内的相互作用得到了准确处理，但其与周围环境的耦合仅仅是现象学上的。
+
+极低温下的磁化强度与绝对零度时仅稍有差异，在这种情况下上述方法都不够让人满意。而对于由规则排列的原子组成的晶体，我们有一种自旋波的方法，这正是本论文的主题。我们的目标有两个：首先，将很多分散在不同文献中的结果以一种统一的方式整理在一处；其次，引入了量子力学理论的简化版本。我们的理论基于用一个简谐振子系统来近似磁性自旋系统，与基于产生湮灭算符的传统布洛赫（Bloch）、荷斯坦（Holstein）和普里马科夫（Primakoff）理论的差别很大程度上仅仅是语义学上的。尽管如此，有一些读者，他们觉得简谐振子相比于量子力学场论更加符合直觉，对他们而言这种方法可能更易于理解。
+
+我们的处理方式（除了特别说明的）都是基于磁性固体的海森堡（Heisenberg）或者“局域自旋”模型，它类似于化学键的海特勒-伦敦（Heitler-London）模型。磁性被认为是完全来自均匀分布在晶体中的电子自旋。这个模型可以概括的范围包括磁性电子的巡回效应，即导带结构，或者考虑到在大多数铁磁材料中实际上每个格点的自旋数不是整数的事实，这在第\ref{sec:11}章中进行了简要介绍。在我们看来，对此类情况的扩展要么涉及很广，要么仅具有定性有效性。因此在某种意义上，传统的自旋波理论只是学术性的，因为它基于过于理想化的模型，但是它同样适用于非导体的反铁磁或铁氧体。
+
+如果不考虑模型的适用性，那么我们一开始就应该对能够从自旋波理论获得的结果进行评估。在铁磁学中，可以得出以下结果：接近绝对零度时的磁化强度（也许是最著名的结果），磁化强度对场强的依赖性，低温下的交换比热以及铁磁共振的频率。 在通常的自旋波处理中被忽略，但是仍基于理想 Heisenberg 或 Heitler-London 模型的项的引入，为自旋-自旋弛豫时间的存在提供了一种机制。自旋波理论也给反铁磁提供了相应结果，尽管这里的近似在严谨性方面值得商榷。
+
+有关自旋波理论的文献很多。本文中大概包含五十篇参考文献，即使如此我们的文献列表可能也是不完整的。已经有两种不同的方法来介绍自旋波的概念，即量子力学方法和半经典方法。量子力学方法是斯莱特（Slater）和布洛赫（Bloch）在试图推导铁磁晶体低能级的近似表达式时提出的。后来由荷斯坦（Holstein）和普里马科夫（Primakoff）引入另一种方法，采用了不同方式推导出基本相同的结果。半经典方法是由海勒（Heller）和克雷默斯（Kramers）提出的，目的是对斯莱特（Slater）和布洛赫（Bloch）引入的自旋波给出一种经典解释。这两种方法最近都被凯弗（Keffer）、卡普兰（Kaplan）和亚菲特（Yafet）在铁磁和反铁磁共振的研究中检验了。
+
+我们现在用数学术语来描述我们使用的局域自旋模型。如果我们像布洛赫原理那样，仅考虑各向同性自旋耦合，那么自旋系统的哈密顿量是
+\begin{equation} \label{eq:1}
+\mathcal{H}=-Hg\beta\sum\nolimits_iS_{iz}-2J\sum\nolimits_{\mathit{nei}}\mathbf{S}_{i}\cdot \mathbf{S}_{j},
+\end{equation}
+其中$\beta$是玻尔磁子$e\hslash/2mc$，$g$是朗德因子，约等于$2$，而$\mathbf{S}_i$是原子$i$的自旋角动量，为$\hslash$的倍数，并假设所有的磁性原子有相同的自旋量子数$S$。公式\eqref{eq:1}中的第一项是自旋在一个大小为$H$的磁场中的塞曼能，我们假设磁场方向沿着$z$轴。第二项为交换能；关于交换能与两个自旋矢量的标量积成正比的证明是十分标准的，我们在此就忽略了。我们约束研究对象为简单晶格，并假设除了最近邻原子之间，其他交换能可以忽略。现在所有没有消失的交换积分都等于$J$，并且式\eqref{eq:1}中仅对最邻近原子求和，正如全文习惯使用的下标$\mathit{nei}$所示。耦合常数$J$等于最邻近原子的交换积分，对于铁磁体为正数，对于反铁磁为负数。在更普遍的情况中，交换能的形式为$-2\sum_{j>i}J_{ij}\mathbf{S}_i\cdot\mathbf{S}_j$，并且无论相对距离的大小，对晶体中所有的原子对求和。如果晶格是规则的并且不考虑边界效应，这仍然可以当作自旋波来处理，但是对于这种情况，我们将不给出明确的推导；这个过程其实类似于我们现在所用的方法。
+
+自旋波的所有计算均基于矢量或海森堡模型，其中耦合常数与标量积$\mathbf{S}_{i}\cdot\mathbf{S}_{j}$成正比；伊辛模型则任意地使用了一个势能$S_{iz}S_{jz}$。从数学的角度来看，这是一种简化，因为每个单独的$S_{iz}$是运动的常数，而且可以被量化。但是，量子力学的交换效应实际上导致了矢量形式。因此，伊辛模型是纯粹学术化抽象。实际上，它根本不给出任何自旋波，而自旋波理论最重要的是处理比伊辛模型更真实的情况。
+
+除了式\eqref{eq:1}中包含的各向同性耦合（这么称呼是因为标量积$\mathbf{S}_{i}\cdot\mathbf{S}_{j}$仅依赖于矢量$\mathbf{S}_i$和$\mathbf{S}_j$之间的角度，与他们合成之后的方向无关），实际上存在各向异性相互作用，其中最低次项是“偶极”或者“张量”结构
+\begin{equation} \label{eq:2}
+\sum\nolimits_{j>i}D_{\mathit{ij}}[(\mathbf{S}_i\cdot\mathbf{S}_j)-3(\mathbf{S}_i\cdot\mathbf{r}_{\mathit{ij}})(\mathbf{S}_j\cdot\mathbf{r}_{\mathit{ij}})/r_{\mathit{ij}}^2].
+\end{equation}
+对于经典电磁学，即真实的磁性自旋-自旋相互作用，常数$D_{ij}$的值为
+\begin{equation} \label{eq:3} 
+D_{\mathit{ij}}=g^2\beta^2/r_\mathit{ij}^3.
+\end{equation}
+然而，现在普遍认为$D_{ij}$的非经典值以及在很短原子间距离处有更大的数量级，可能是由于自旋轨道耦合的间接影响，而这是由复杂的扰动机制引起的，我们在此不作描述。这样的$D_{ij}$非经典值经常被认作是“假偶极”或者“各向异性交换”耦合。最重要的经典偶极耦合效应是长程的。因此当\eqref{eq:3}式中的$D_{ij}$带入\eqref{eq:2}式时，重要的是求和将不受限制，不再局限于最近邻原子。另一方面，$D_{ij}$的非经典部分相对而言是短程的，就像$J_{ij}$。
+
+公式\eqref{eq:2}中表达了两个原子（如果它们的自旋是$\frac{1}{2}$，并且关于它们中心连线对称）间最普遍的各向异性耦合。对于自旋大于$\frac{1}{2}$，还有四极耦合项，如
+\begin{equation*}
+E_\mathit{ij}(\mathbf{S}_i\cdot\mathbf{r}_\mathit{ij})^2(\mathbf{S}_j\cdot\mathbf{r}_\mathit{ij})^2.
+\end{equation*}
+对于更大的自旋值更高阶项还会出现。四极相互作用对于各向异性来说是重要的，因为它能在一阶近似下给出简单立方晶体中的各向异性。然而，\eqref{eq:2}式中的偶极结构相互作用，尽管它甚至能够在一阶近似下给出非简单立方晶体中的各向异性，但是只有在二阶近似下才能在简单立方材料给出相应的结果。这种属性是对称性要求的直接结果，因为当所有三个轴都相等时，方向余弦的二次形式（例如基于式\eqref{eq:2}的任何一阶计算得出的结果）会退化为球对称关系。另一方面，当平方时，如在二阶微扰计算中那样，可以获得立方各向异性的四次角依赖$\lambda^2\mu^2+\lambda^2\nu^2+\mu^2\nu^2$特性。
+
+尽管我们可能在任何计算中均不包含四极耦合，但它可能会隐含在本文后面的某些部分中使用的各向异性场中。为了简单起见，我们推迟到第\ref{sec:5}章再包含偶极相互作用\eqref{eq:2}，这对于铁磁共振和退磁效应很重要。
+
+
+
+%%===========================================================
+%%===========================================================
+
+\section{自旋-偏差量子数} \label{sec:2}
+
+继荷斯坦（Holstein）和普里马科夫（Primakof）之后，我们引入了自旋-偏差量子数$n=S-m$，它代替了与原子自旋$S$的$z$分量相对应的普通量子数$m$，代表$S_z$对其最大值$S$的偏离。$n$的允许值为$0,~1,~2,~\cdots,~2S$，它们是自旋-偏差算符$n=S-S_z$的本征值。在该算符$n$为对角矩阵的表示中，$S$的三个分量的不为零的矩阵元由熟悉的表达式给出
+\begin{eqnarray} \label{eq:4}
+&&\bra{n}S_x\ket{n+1}=\bra{n+1}S_x\ket{n}=\tfrac{1}{2}(n+1)^{\frac{1}{2}}(2S-n)^{\frac{1}{2}};\nonumber\\
+&&\bra{n}S_y\ket{n+1}=\bra{n+1}S_y\ket{n}^*=-\tfrac{1}{2}i(n+1)^{\frac{1}{2}}(2S-n)^{\frac{1}{2}};\\
+&&\phantom{***}\bra{n}S_z\ket{n}=S-n.\nonumber
+\end{eqnarray}
+$\mathbf{S}_i$分量的矩阵相对于$n_i$具有\eqref{eq:4}式的形式，但相对于晶体中所有其他原子的$n_j$是对角的。因此，矩阵$\mathbf{S}_i$是公式\eqref{eq:4}和$N-1$个单位矩阵的乘积。
+
+在绝对零度时的平衡态，铁磁晶体的所有自旋平行于外场，所以没有自旋偏差并且所有的$n_i$都消失了。众所周知，如果在这种状态下引入一个自旋偏差到一个特定的原子上，则该自旋偏差不会局限在那个原子上：由于与周围原子的交换相互作用，它将自发地通过晶格传播，从而构成一个“自旋波”，或者更确切地说是一个自旋波包。一个自旋波对应于一个具有确定波矢的自旋偏差的传播。正如我们后面展示的，只要在整个晶格中只有一个自旋偏差，与这个确定波矢的自旋波激发相对应的自旋系统的状态正是哈密顿量\eqref{eq:1}的本征态。总之，如果我们使用撇上标去表记整个晶体的自旋，即矢量求和每个原子的自旋$\mathbf{S}'=\sum_i\mathbf{S}_i$，则\eqref{eq:1}式的本征值可以就被计算：$S_z'=NS$和$S_z'=NS-1$，其中$N$是晶体中的原子总数。
+
+整个自旋波近似的本质在于，对于较小的总晶体自旋偏差，可以将$S_z'=NS-n$状态与完全平行的$S_z'=NS$状态之间的能量差视为大约等于$n$个严格计算得出的单位偏差之和。
+换句话说，可加性的假设是与自旋反转有关的。实际上，这种假设是不准确的。例如，如果存在两个自旋偏差，则自旋系统的能量将取决于自旋偏差是否位于（i）同一原子上（仅对于$S>\frac{1}{2}$才可能存在），（ii）相邻原子上，或者（iii）相距更远的原子上（它们的自旋在哈密顿量\eqref{eq:1}中没有耦合）。由于总能量对两个自旋偏差之间距离的依赖性，以及自旋波之间的相互作用，因此不能精确地满足叠加原理。存在两种不同的错误原因。如果我们尝试可视化由此产生的能量修正，则一种修正可以被解释为排斥作用，另一种可以被解释为自旋偏差之间的吸引作用。例如，对于$S=\frac{1}{2}$，排斥是由于给定的某个原子上的自旋偏差不能超过一个。因此，如果两个自旋偏差接近相同的某个晶格位置，由于这种“相互作用”，它们将被散射开。如果$S>\frac{1}{2}$，则仅当存在大于$2S$的自旋波时才会出现这种排斥，然后情况会变得更加复杂。由于两个自旋偏差位于最近邻原子上时的总交换能比位于两个距离更远原子上时的低，因此产生了相互之间的吸引力。在一维晶格中，这种吸引力会导致“自旋复合体”（参见Bethe），即自旋偏差相互绑定的状态，当然也与散射相关联。但是，应该清楚地理解，总的散射截面和由此产生的能量修正由排斥作用和吸引相互作用共同决定。
+
+自旋波近似的现实基础是，在足够低的温度下，自旋偏差之间相互作用的影响可以被忽略。在低温下，磁化强度稍有偏离饱和磁化强度。与晶体中原子的总数相比，晶体中自旋偏差数的平均值较小，因此它们之间的相互作用可以忽略不计。
+
+
+
+%%===========================================================
+%%===========================================================
+
+\section{铁磁体的简谐近似} \label{sec:3}
+
+自旋矩阵\eqref{eq:4}与众所周知的简谐振子坐标和动量矩阵之间的相似性是当前处理自旋波方法的起点。本章解释了这种方法如何被用于没有偶极修正\eqref{eq:2}的铁磁体情况。反铁磁体的情况将在第\ref{sec:7}-\ref{eq:8}章中进行讨论。
+
+\begin{equation} \label{eq:5}
+\begin{array}{l}
+\bra{n}x\ket{n+1}=\bra{n+1}x\ket{n}=(\hslash/2m\omega)^{\frac{1}{2}}(n+1)^{\frac{1}{2}},\\
+\bra{n}p\ket{n+1}=\bra{n+1}p\ket{n}^*=-i(\hslash m\omega/2)^{\frac{1}{2}}(n+1)^{\frac{1}{2}},
+\end{array}
+\end{equation}
+
+\begin{equation} \label{eq:6}
+\left<n\left|\frac{1}{2m}p^2+\frac{1}{2}m\omega^2x^2-\frac{1}{2}\hslash\omega\right|n\right>=n\cdot\hslash\omega.
+\end{equation}
+
+\begin{equation} \label{eq:7}
+Q=(m\omega/\hslash)^{\frac{1}{2}}x\text{~~和~~}P=(\hslash m\omega)^{-\frac{1}{2}}p,
+\end{equation}
+
+\begin{eqnarray} \label{eq:8}
+&&\bra{n}S^{\frac{1}{2}}Q\ket{n+1}=\bra{n+1}S^{\frac{1}{2}}Q\ket{n}=\tfrac{1}{2}(n+1)^{\frac{1}{2}}(2S)^{\frac{1}{2}};\nonumber\\
+&&\bra{n}S^{\frac{1}{2}}P\ket{n+1}=\bra{n+1}S^{\frac{1}{2}}P\ket{n}^*=-\tfrac{1}{2}i(n+1)^{\frac{1}{2}}(2S)^{\frac{1}{2}};\\
+&&\bra{n}S-\tfrac{1}{2}(P^2+Q^2-1)\ket{n}=S-n.\nonumber
+\end{eqnarray}
+
+\begin{equation} \label{eq:9}
+S_x=S^{\frac{1}{2}}Q;~~S_y=S^{\frac{1}{2}}P;~~S_z=S-\tfrac{1}{2}(P^2+Q^2-1).
+\end{equation}
+
+\begin{eqnarray} \label{eq:10}
+&\mathcal{H}=-Hg\beta\sum\nolimits_i[S-\tfrac{1}{2}(P_i^2+Q_i^2-1)]\nonumber\\
+&\phantom{~~~~}-2JS\sum\nolimits_{\mathit{nei}}(P_iP_j+Q_iQ_j)+\nonumber\\
+&\phantom{~~~~~~~}-2J\sum\nolimits_{nei}[S-\tfrac{1}{2}(P_i^2+Q_i^2-1)]\nonumber\\
+&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\times[S-\tfrac{1}{2}(P_j^2+Q_j^2-1)].
+\end{eqnarray}
+
+\begin{equation} \label{eq:11}
+S^+=(2S)^{\frac{1}{2}}a;~~S^-=(2S)^{\frac{1}{2}}a^*;~~S_z=S-a^*a.
+\end{equation}
+
+\begin{equation} \label{eq:12}
+\begin{array}{c}
+S^+=(2S)^{\frac{1}{2}}(a-a^*aa);~~S^-=(2S)^{\frac{1}{2}}(a^*-a^*a^*a);\\
+S_z=S-a^*a+a^*a^*aa;
+\end{array}
+\end{equation}
+
+\begin{eqnarray} \label{eq:13}
+&&\mathcal{H}=E_0'+g\beta(H+H_E)\sum\nolimits_i\tfrac{1}{2}(P_i^2+Q_i^2-1)+\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}-2JS\sum\nolimits_{\mathit{nei}}(P_iP_j+Q_iQ_j),
+\end{eqnarray}
+
+\begin{equation*}
+H_E=2JSz/g\beta.
+\end{equation*}
+
+\begin{equation} \label{eq:14}
+E_0'=-NHg\beta S-\tfrac{1}{2}Nz\cdot 2JS^2,
+\end{equation}
+
+\begin{eqnarray} \label{eq:15}
+&&\Delta E=[-Hg\beta(S-1)-2JzS(S-1)]\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~~~~~}-[-Hg\beta S-2JzS^2]=g\beta(H+H_E),
+\end{eqnarray}
+
+\begin{equation} \label{eq:16}
+\mathcal{H}_0=\sum_i(\frac{1}{2m}p_i^2+\frac{1}{2}m\omega^2x_i^2-\frac{1}{2}\hslash\omega)+E_0',
+\end{equation}
+
+\begin{equation} \label{eq:17}
+\begin{array}{l}
+Q_k=(1/N)^{\frac{1}{2}}\sum\nolimits_{i}\exp(i\mathbf{k}\cdot\mathbf{r}_i)Q_i;\\
+P_k=(1/N)^{\frac{1}{2}}\sum\nolimits_{i}\exp(-i\mathbf{k}\cdot\mathbf{r}_i)P_i;
+\end{array}
+\end{equation}
+
+
+\begin{subequations} \label{eq:18}
+\begin{equation}
+k_x \geqslant 0 \left\{
+\begin{array}{l}
+Q_k=(2/N)^{\frac{1}{2}}\sum\nolimits_{i}\cos(\mathbf{k}\cdot\mathbf{r}_i)Q_i;\\
+P_k=(2/N)^{\frac{1}{2}}\sum\nolimits_{i}\sin(\mathbf{k}\cdot\mathbf{r}_i)P_i;
+\end{array}
+\right.
+\end{equation}
+\begin{equation}
+k_x < 0 \left\{
+\begin{array}{l}
+Q_k=(2/N)^{\frac{1}{2}}\sum\nolimits_{i}\sin(\mathbf{k}\cdot\mathbf{r}_i)Q_i;\\
+P_k=(2/N)^{\frac{1}{2}}\sum\nolimits_{i}\cos(\mathbf{k}\cdot\mathbf{r}_i)P_i.
+\end{array}
+\right.
+\end{equation}
+\end{subequations}
+
+\begin{equation} \label{eq:19}
+\mathcal{H}=\sum\nolimits_k\tfrac{1}{2}(P_k^2+Q_k^2-1)\hslash\omega_k+E_0',
+\end{equation}
+
+\begin{equation} \label{eq:20}
+\hslash\omega_k=Hg\beta+2JS[z-\sum\nolimits_a\cos(\mathbf{k}\cdot\mathbf{a})],
+\end{equation} 
+
+\begin{equation*}
+\mathfrak{n}_k=\tfrac{1}{2}(P_k^2+Q_k^2-1),
+\end{equation*}
+
+\begin{equation} \label{eq:21}
+E(\mathfrak{n}_k)=\sum\nolimits_k\mathfrak{n}_k\cdot\hslash\omega_k+E_0',
+\end{equation}
+
+\begin{equation} \label{eq:22}
+\hslash\omega_k=Hg\beta+JS\sum\nolimits_aa^2k^2\cos^2\theta_{k,a},
+\end{equation}
+
+\begin{equation} \label{eq:23}
+\hslash\omega_k=Hg\beta+2JSk^2l^2.
+\end{equation}
+
+
+%%===========================================================
+%%===========================================================
+
+\section{自旋波近似下铁磁质的磁化强度和比热} \label{sec:4}
+
+\begin{equation} \label{eq:24}
+\bar{E}_k=\frac{\hslash\omega_k}{\exp(\hslash\omega_k/kT)-1}.
+\end{equation}
+
+\begin{equation} \label{eq:25}
+\braket{NS-S_z'}_{A_V}=\sum\nolimits_k[\exp(\hslash\omega_k/kt)-1]^{-1},
+\end{equation}
+
+\begin{eqnarray} \label{eq:26}
+&&M_{z0}-M_{z}=g\beta\left(\frac{L}{2\pi}\right)^3\nonumber\\
+&&\phantom{~~~~~~~}\times\iiint\frac{\mathrm{d}k_x\mathrm{d}k_y\mathrm{d}k_z}{\exp(2JS(k_x^2+k_y^2+k_z^2)l^2/kT)-1},
+\end{eqnarray}
+
+\begin{equation} \label{eq:27}
+\begin{array}{l}
+M_{z0}-M_z\\
+\phantom{~~~}=g\beta\displaystyle\left(\frac{L}{2\pi}\right)^3 4\pi\int_0^\infty\frac{k_0^2\mathrm{k_0}}{\exp(2JSk_0^2l^2/kT)-1}\\
+\phantom{~~~}=\displaystyle\left(\frac{L}{l}\right)^3\frac{g\beta}{2\pi^2}\left(\frac{kT}{2JS}\right)^{\frac{3}{2}}\int_0^\infty\frac{V^2}{e^{V^2}-1}\mathrm{d}V\\
+\phantom{~~~}=\displaystyle\left(\frac{L}{l}\right)^3\frac{g\beta}{2\pi^2}\left(\frac{kT}{2JS}\right)^{\frac{3}{2}}\int_0^\infty V^2(e^{-V^2}+e^{-2V^2}+\cdots)\mathrm{d}V\\
+\phantom{~~~}=\displaystyle\left(\frac{L}{l}\right)^3\frac{g\beta}{2\pi^2}\left(\frac{kT}{2JS}\right)^{\frac{3}{2}}\frac{\pi^{\frac{1}{2}}}{4}\left(1+\frac{1}{2^{\frac{3}{2}}}+\frac{1}{3^{\frac{3}{2}}}+\cdots\right).
+\end{array}
+\end{equation}
+
+\begin{equation} \label{eq:28}
+\begin{array}{l}
+M_z=M_{z0}\displaystyle\left[1-\left(\frac{kT}{2JS}\right)^{\frac{3}{2}}\left(\frac{1}{4\pi}\right)^{\frac{3}{2}}\frac{1}{S}\zeta(\frac{3}{2})\right]\\
+\phantom{~~~~}=\displaystyle M_{z0}\left[1-0.1187\left(\frac{kT}{2JS}\right)^{\frac{3}{2}}\frac{1}{S}\right].
+\end{array}
+\end{equation}
+
+\begin{equation} \label{eq:29}
+U=\left(\frac{L}{2\pi}\right)^3 4\pi\int_0^\infty\frac{(2JSk_0^2l^2)k_0^2\mathrm{d}k_0}{\exp(2JSk_0^2l^2/kT)-1},
+\end{equation}
+
+\begin{eqnarray} \label{eq:30}
+&&U=\frac{(L/l)^3(2JS)}{2\pi^2}\left(\frac{kT}{2JS}\right)^{\frac{5}{2}}\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~}\times\int_0^\infty V^4(e^{-V^2}+e^{-2V^2}+\cdots)\mathrm{d}V,
+\end{eqnarray}
+
+\begin{equation} \label{eq:31}
+C_V=\mathrm{d}U/\mathrm{d}T=cNk(kT/2JS)^{\frac{3}{2}}
+\end{equation}
+
+\begin{equation} \label{eq:32}
+c=\tfrac{5}{2}\left(\frac{1}{2\pi^2}\right)\frac{3\pi^{\frac{1}{2}}}{8}\zeta(\tfrac{5}{2})=\frac{15}{8\pi^{\frac{3}{2}}}\zeta(\tfrac{5}{2})=0.113.
+\end{equation}
+
+
+%%===========================================================
+%%===========================================================
+
+\section{偶极结构相互作用的影响} \label{sec:5}
+
+\begin{eqnarray} \label{eq:33}
+&&\mathcal{H}=-2J\sum\nolimits_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j+\sum\nolimits_{j>i}D_{ij}[\mathbf{S}_i\cdot\mathbf{S_j}\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}-3(\boldsymbol{\alpha}_{ij}\cdot\mathbf{S}_i)(\boldsymbol{\alpha}_{ij}\cdot\mathbf{S}_j)].
+\end{eqnarray}
+
+\begin{equation} \label{eq:34}
+n_i=\tfrac{1}{2}(P_i^2+Q_i^2-1).
+\end{equation}
+
+
+\begin{equation} \label{eq:35}
+\mathcal{H}=-2J\sum\nolimits_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j+D_0+D_1+D_2+D_3+D_4,
+\end{equation}
+
+\begin{eqnarray}
+&&D_0=S^2\sum\nolimits_{j>i}D_{ij}(1-3\gamma_{ij}^2),\label{eq:36}\\
+&&D_1=-6S^{\frac{3}{2}}\sum\nolimits_{j>i}D_{ij}[\alpha_{ij}\gamma_{ij}Q_j+\beta_{ij}\gamma_{ij}P_j],\label{eq:37}\\
+&&D_2=S\sum\nolimits_{j>i}D_{ij}[(1-\alpha_{ij}^2)Q_iQ_j-3\alpha_{ij}\beta_{ij}(Q_iP_j+P_iQ_j)\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~}+(1-3\beta_{ij}^2)P_iP_j-(1-3\gamma_{ij}^2)2n_i],\label{eq:38}\\
+&&D_3=3S^{\frac{1}{2}}\sum\nolimits_{j>i}D_{ij}[\alpha_{ij}\gamma_{ij}(Q_i)n_j+n_iQ_j)\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}+\beta_{ij}\gamma_{ij}(P_in_j+n_iP_j)], \label{eq:39}\\
+&&D_4=\sum\nolimits_{j>i}D_{ij}(1-3\gamma_{ij}^2)n_in_j.\label{eq:40}
+\end{eqnarray}
+
+\begin{equation} \label{eq:41}
+N_z=(V/N)\sum\nolimits_j\boldsymbol{r}_{ij}^{-3}(1-3\gamma_{ij}^2)+(4\pi/3)
+,\end{equation}
+
+
+\begin{equation} \label{eq:42}
+M_0=(N/V)g\beta S,
+\end{equation}
+
+\begin{equation} \label{eq:43}
+D_0=-\tfrac{1}{2}VM_0[(4\pi/3)M_0-N_zM_0].
+\end{equation}
+
+\begin{equation} \label{eq:44}
+\sum\nolimits_jD_{ij}\alpha_{ij}\gamma_{ij}=\sum\nolimits_jD_{ij}\beta_{ij}\gamma_{ij}=0,
+\end{equation}
+
+\begin{equation} \label{eq:45}
+-2J\sum\nolimits_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j+D_2.
+\end{equation}
+
+\begin{eqnarray} \label{eq:46}
+&&\tfrac{1}{2}N^{-1}S\sum\nolimits_{i,j}D_{ij}(1-3\alpha_{ij}^2)\sum\nolimits_{k,k'}Q_kQ_{k'}\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\times\exp[-i\mathbf{k}\cdot\mathrm{r}_i-i\mathbf{k}'\cdot\mathbf{r}_j],
+\end{eqnarray}
+
+\begin{eqnarray} \label{eq:47}
+&&\tfrac{1}{2}N^{-1}S\sum\nolimits_{k,k'}Q_kQ_{k'}\sum\nolimits_{i}\exp[-i(\mathbf{k}+\mathbf{k}')\cdot\mathbf{r}_i]\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~~}\times\sum\nolimits_jD_{ij}(1-3\alpha_{ij}^2)\exp[-i\mathbf{k}'\cdot(\mathbf{r}_j-\mathbf{r}_i)].
+\end{eqnarray}
+
+
+\begin{equation} \label{eq:48}
+\begin{array}{l}
+A_{xx}(\mathbf{k})=S\sum\nolimits_jD_{ij}(1-3\alpha_{ij}^2)\exp[i\mathbf{k}\cdot(\mathbf{r}_j-\mathbf{r}_i)];\\
+A_{xy}(\mathbf{k})=-3S\sum\nolimits_jD_{ij}\alpha_{ij}\beta_{ij}\exp[i\mathbf{k}\cdot(\mathbf{r}_j-\mathbf{r}_i)];
+\end{array}
+\end{equation}
+
+\begin{equation} \label{eq:49}
+N^{-1}\sum\nolimits_i\exp(i\mathbf{k}\cdot\mathbf{r}_i)=\delta(\mathbf{k}),
+\end{equation}
+
+\begin{equation} \label{eq:50}
+\tfrac{1}{2}\sum\nolimits_kA_{xx}(\mathbf{k})Q_kQ_{-k}.
+\end{equation}
+
+
+\begin{eqnarray} \label{eq:51}
+&&D_2=\tfrac{1}{2}\sum\nolimits_k[A_{xx}(\mathbf{k})-A_{zz}(0)]Q_kQ_{-k}\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~~~~~}+\tfrac{1}{2}\sum\nolimits_k[A_{yy}(\mathbf{k})-A_{zz}(0)]P_kP_{-k}\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}+\sum\nolimits_kA_{xy}(\mathbf{k})Q_kP_k+\tfrac{1}{2}NA_{zz}(0).
+\end{eqnarray}
+
+\begin{equation} \label{eq:52}
+\mathcal{H}=\tfrac{1}{2}\sum\nolimits_k[A(\mathbf{k})Q_k^2+B(\mathbf{k})P_k^2+2C(\mathbf{k})Q_kP_k]+E_0''.
+\end{equation}
+
+\begin{eqnarray} 
+&&A(\mathbf{k})=\hslash\omega_k^{(0)}+A_{xx}(\mathbf{k})-A_{zz}(0); \label{eq:53}\\
+&&B(\mathbf{k})=\hslash\omega_k^{(0)}+A_{yy}(\mathbf{k})-A_{zz}(0); \label{eq:54}\\
+&&C(\mathbf{k})=A_{xy}(\mathbf{k}); \label{eq:55}
+\end{eqnarray}
+
+\begin{equation} \label{eq:56}
+E_0''=E_0'+\tfrac{1}{2}N(S+1)A_{zz}(0)-\sum\nolimits_k\tfrac{1}{2}\hslash\omega_k^{(0)},
+\end{equation}
+
+\begin{equation} \label{eq:57}
+\mathcal{H}=\sum\nolimits_k\tfrac{1}{2}(Q_k'^2+P_k'^2)(AB-C^2)^{\frac{1}{2}}+E_0''.
+\end{equation}
+
+\begin{equation} \label{eq:58}
+E(\mathfrak{n}_k)=\sum\nolimits_k\mathfrak{n}_k\cdot\hslash\omega_k+E_0,~~(\mathfrak{n}=0,1,2,\cdots),
+\end{equation}
+
+\begin{equation} \label{eq:59}
+\hslash\omega_k=[A(\mathbf{k})B(\mathbf{k})-C(\mathbf{k})^2]^{\frac{1}{2}},
+\end{equation}
+
+
+\begin{equation} \label{eq:60}
+E_0=E_0''+\tfrac{1}{2}\sum\nolimits_k\hslash\omega_k,
+\end{equation}
+
+
+%%===========================================================
+%%===========================================================
+
+\section{铁磁共振吸收的自旋波理论} \label{sec:6}
+
+\begin{equation} \label{eq:61}
+\hslash\omega=g\beta\{[H+(N_x-N_z)M][H+(N_y-N_z)M]\}^{\frac{1}{2}}.
+\end{equation}
+
+\begin{equation} \label{eq:62}
+\mathcal{H}'=-H_zg\beta\sum\nolimits_iS_{ix},
+\end{equation}
+
+\begin{equation} \label{eq:63}
+\mathcal{H}'=-H_xg\beta S^{\frac{1}{2}}\sum\nolimits_iQ_i=-H_xg\beta(NS)^{\frac{1}{2}}Q_0,
+\end{equation}
+
+\begin{equation} \label{eq:64}
+\mathcal{H}'=-H_xg\beta(NS)^{\frac{1}{2}}(aQ_0'+bP_0'),
+\end{equation}
+
+\begin{equation} \label{eq:65}
+\mathfrak{n}_0'=\mathfrak{n}_0\pm 1~~\text{和}~~\mathfrak{n}_k'=\mathfrak{n}_k~~\text{对于}~~k\neq 0.
+\end{equation}
+
+\begin{equation} \label{eq:66}
+\hslash\omega_0=[A(0)B(0)-C(0)^2]^{\frac{1}{2}},
+\end{equation}
+
+\begin{eqnarray} \label{eq:67}
+&&\hslash\omega_0=\{[g\beta H+A_{xx}(0)-A_{zz}(0)]\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~}\times[g\beta H+A_{yy}(0)-A_{zz}(0)]-A_{xy}(0)^2\}^{\frac{1}{2}}.
+\end{eqnarray}
+
+\begin{eqnarray} \label{eq:68}
+&&A_{zz}(0)=S\sum\nolimits_jg^2\beta^2r_{ij}^{-3}(1-3\gamma_{ij}^2)\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}=g\beta N_z(N/V)g\beta S=g\beta N_zM_0,
+\end{eqnarray}
+
+\begin{equation} \label{eq:69}
+\hslash\omega_0=g\beta\{[H+(N_x-N_z)M_0][H+(N_y-N_z)M_0]\}^{\frac{1}{2}},
+\end{equation}
+
+\begin{equation} \label{eq:70}
+\mathcal{H}=-VM_zH+\tfrac{1}{2}V(N_xM_x^2+N_yM_y^2+N_zM_z^2).
+\end{equation}
+
+\begin{equation} \label{eq:71}
+\mathcal{H}=-VM_zH+\tfrac{1}{2}V[(N_x-N_z)M_x^2+(N_y-N_z)M_y^2].
+\end{equation}
+
+\begin{eqnarray} \label{eq:72}
+&&\mathcal{H}=-Hg\beta J_z+\tfrac{1}{2}(g\beta M/J)\nonumber\\
+&&\phantom{~~~~~~~~~~~~~~~~~~~~~~~}\times[(N_x-N_z)J_x^2+(N_y-N_z)J_y^2].
+\end{eqnarray}
+
+\begin{equation} \label{eq:73}
+J_x=J^{\frac{1}{2}}Q;~~J_y=J^{\frac{1}{2}}P;~~J_z=J-\tfrac{1}{2}(P^2+Q^2-1),
+\end{equation}
+
+\begin{equation} \label{eq:74}
+\mathcal{H}=\text{const}+g\beta\tfrac{1}{2}(aQ^2+bP^2),
+\end{equation}
+
+\begin{equation} \label{eq:75}
+Q=(b/a)^{\frac{1}{2}}Q',~~P=(a/b)^{\frac{1}{2}}P',
+\end{equation}
+
+\begin{equation} \label{eq:76}
+\mathcal{H}=\text{const}+g\beta(ab)^{\frac{1}{2}}\tfrac{1}{2}(P'^2+Q'^2),
+\end{equation} 
+
+
+%%===========================================================
+%%===========================================================
+
+\section{反铁磁的简谐近似} \label{sec:7}
+
+\begin{equation} \label{eq:77}
+\mathcal{H}=-2J\sum\nolimits_{\textit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j.
+\end{equation} 
+
+\begin{equation} \label{eq:78}
+\mathcal{H}=2J\sum\nolimits_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j,
+\end{equation}
+
+\begin{equation} \label{eq:79}
+\mathcal{H}=2J\sum\nolimits_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j-H_Ag\beta(\sum\nolimits_iS_{iz}-\sum\nolimits_jS_{jz}),
+\end{equation}
+
+\begin{eqnarray} \label{eq:80}
+&&\mathcal{H}=2J\sum\nolinebreak_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j-(H+H_A)g\beta\sum\nolimits_iS_{iz}+\nonumber\\
+&&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-(H-H_A)g\beta\sum\nolimits_jS_{jz},
+\end{eqnarray}
+
+\begin{equation} \label{eq:81}
+n_i=S-m_i,~~\text{和}~~n_j=S+m_j.
+\end{equation} 
+
+\begin{eqnarray} 
+&&S_{ix}=S^{\frac{1}{2}}Q_i;~~S_{iy}=S^{\frac{1}{2}}P_i;~~S_{iz}=S-\tfrac{1}{2}(P_i^2+Q_i^2-1);\label{eq:82}\\
+&&S_{jx}=S^{\frac{1}{2}}Q_j;~~S_{iy}=-S^{\frac{1}{2}}P_j;~~S_{jz}=-S+\tfrac{1}{2}(P_j^2+Q_j^2-1).\label{eq:83}
+\end{eqnarray} 
+
+\begin{eqnarray} \label{eq:84}
+&&\mathcal{H}=E_0'+2JS\sum\nolimits_{\mathit{nei}}(Q_iQ_j-P_iP_j)-2J\sum\nolimits_{\mathit{nei}}n_in_j\nonumber\\
+&&~~~~~~~~~~~~~~~~~~~~+[2JS_z+g\beta(H_A+H)]\sum\nolimits_in_i\nonumber\\
+&&~~~~~~~~~~~~~~~~~~~~~~~~~~~~+[2JS_z+g\beta(H_A=H)]\sum\nolimits_jn_j,
+\end{eqnarray}
+
+\begin{equation} \label{eq:85}
+n_i=\tfrac{1}{2}(P_i^2+Q_i^2-1)~~\text{和}~~n_j=\tfrac{1}{2}(P_j^2+Q_j^2-1),
+\end{equation}	
+
+\begin{equation} \label{eq:86}
+E_0'=-NzJS^2-H_Ag\beta NS.
+\end{equation}
+
+\begin{equation} \label{eq:87}
+\left\{
+\begin{array}{l}
+Q_{1k}=(2/N)^{\frac{1}{2}}\sum\nolimits_i\exp(i\mathbf{k}\cdot\mathbf{r}_i)Q_i;\\
+P_{1k}=(2/N)^{\frac{1}{2}}\sum\nolimits_i\exp(-i\mathbf{k}\cdot\mathbf{r}_i)P_i;
+\end{array}
+\right.
+\end{equation}
+
+\begin{equation} \label{eq:88}
+\left\{
+\begin{array}{l}
+Q_{2k}=(2/N)^{\frac{1}{2}}\sum\nolimits_j\exp(-i\mathbf{k}\cdot\mathbf{r}_j)Q_j;\\
+P_{2k}=(2/N)^{\frac{1}{2}}\sum\nolimits_j\exp(i\mathbf{k}\cdot\mathbf{r}_j)P_j.
+\end{array}
+\right.
+\end{equation}
+
+\begin{eqnarray} \label{eq:89}
+&&\mathcal{H}=E_0'+\sum\nolimits_k\{[2JSz+g\beta(H_A+H)]\nonumber\\
+&&~~~~~~\times\tfrac{1}{2}(P_{1k}P_{1-k}+Q_{1k}Q_{1-k}-1)\nonumber\\
+&&~~~~~~+[2JSz+g\beta(H_A-H)]\tfrac{1}{2}(P_{2k}P_{2-k}+Q_{2k}Q_{2-k}-1)\nonumber\\
+&&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+2JS\gamma_k(Q_{1k}Q_{2k}-P_{1k}P_{2k})\}.
+\end{eqnarray}
+
+
+\begin{equation} \label{eq:90}
+\gamma_k=z^{-1}\sum\nolimits_a\cos(\mathbf{k}\cdot\mathbf{a}),
+\end{equation}
+
+\begin{equation} \label{eq:91}
+\begin{array}{l}
+\left\{
+\begin{array}{l}
+Q_1k=c_{1k}Q_{1k}'+c_{2k}Q_{2-k}';\\
+Q_{2-k}=c_{2k}Q_{1k}'+c_{1k}Q_{2-k}';
+\end{array}
+\right.\\
+\left\{
+\begin{array}{l}
+P_{1k}=c_{1k}P_{1k}'-c_{2k}P_{2-k}',\\
+P_{2-k}=-c_{2k}P_{1k}'+c_{1k}P_{2-k}',
+\end{array}
+\right.
+\end{array}
+\end{equation}
+
+\begin{equation} \label{eq:92}
+c_{1k}=\rho_k/(\rho_k^2-\gamma_k^2)^\frac{1}{2};~~c_{2k}=-\gamma_k/(\rho_k^2-\gamma_k^2)^\frac{1}{2},
+\end{equation}
+
+\begin{equation} \label{eq:93}
+\rho_k=1+H_A/H_E+[(1+H_A/H_E)^2-\gamma_k^2]^\frac{1}{2}.
+\end{equation}
+
+\begin{equation*}
+H_E=2JSz/g\beta,
+\end{equation*}
+
+\begin{eqnarray} \label{eq:94}
+&&\mathcal{H}=E_0+\sum\nolimits_k\tfrac{1}{2}(P_{1k}'P_{1-k}'+Q_{1k}'Q_{1-k}'-1)\hslash\omega_{1k}\nonumber\\
+&&~~~~~~~~~~~~~~~~~~~~+\sum\nolimits_k\tfrac{1}{2}(P_{2k}'P_{2-k}'+Q_{2k}'Q_{2-k}'-1)\hslash\omega_{2k}.
+\end{eqnarray}
+
+\begin{equation} \label{eq:95}
+E(\mathfrak{n}_{1k},\mathfrak{n}_{2k})=E_0+\sum\nolimits_k(\mathfrak{n}_{1k}\hslash\omega_{1k}+\mathfrak{n}_{2k}\hslash\omega_{2k}),
+\end{equation}
+
+\begin{equation} \label{eq:96}
+\left\{
+\begin{array}{l}
+\hslash\omega_{1k}=g\beta[(H_E+H_A)^2-\gamma_k^2H_E^2]^\frac{1}{2}+g\beta H;\\
+\hslash\omega_{2k}=g\beta[(H_E+H_A)^2-\gamma_k^2H_E^2]^\frac{1}{2}-g\beta H;
+\end{array}
+\right.
+\end{equation}
+
+\begin{equation} \label{eq:97}
+E_0=E_0'+\tfrac{1}{2}\sum\nolimits_k(\hslash\omega_{1k}+\hslash\omega_{2k}),
+\end{equation}
+
+\begin{equation} \label{eq:98}
+\hslash\omega_{20}=g\beta(H_c-H);~~H_c=[H_A(H_A+2H_E)]^\frac{1}{2}.
+\end{equation}
+
+\begin{equation} \label{eq:99}
+\left\{
+\begin{array}{l}
+\hslash\omega_1=g\beta[H_A(H_A+2H_E)]^\frac{1}{2}+g\beta H;\\
+\hslash\omega_2=g\beta[H_A(H_A+2H_E)]^\frac{1}{2}-g\beta H;
+\end{array}
+\right.
+\end{equation}
+
+
+%%===========================================================
+%%===========================================================
+
+\section{自旋波近似下的反铁磁基态} \label{sec:8}
+
+\begin{equation} \label{eq:100}
+A_{1k}=2^{-\frac{1}{2}}(Q_{1k}'+iP_{1-k}');~~A_{1k}^*=2^{-\frac{1}{2}}(Q_{1-k}'-iP_{1k}'),
+\end{equation}
+
+\begin{equation} \label{eq:101}
+n_i=(2/N)\sum\nolimits_{k,k'}\exp[i(\mathbf{k}'-\mathbf{k})\cdot\mathbf{r}_i]B_{k'}^*B_k,
+\end{equation}
+
+\begin{equation} \label{eq:102}
+B_k=c_{1k}A_{1k}+c_{2k}A_{2k}^*.
+\end{equation}
+
+\begin{equation} \label{eq:103}
+\braket{n_i}=(2/N)\sum\nolimits_i\braket{n_i}=(2/N)\sum\nolimits_k\braket{B_k^*B^*},
+\end{equation}
+
+\begin{equation} \label{eq:104}
+\braket{n_i}=(2/N)\sum\nolimits_kc_{2k}^2=\Gamma(1+H_A/H_E),
+\end{equation}
+
+\begin{equation} \label{eq:105}
+\Gamma(x)=(2/N)^\frac{1}{2}\sum\nolimits_k\tfrac{1}{2}[(1-\gamma_k^2/x)^{-\frac{1}{2}}-1],
+\end{equation}
+
+\begin{eqnarray} \label{eq:106}
+&&\braket{n_i^2}=(2/N)^2\sum\nolimits_{k,k'}\sum\nolimits_{l,l'}\delta(k+l-k'-l')\nonumber\\
+&&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\times\braket{B_{k'}^*B_kB_{l'}^*B_l}.
+\end{eqnarray}
+
+\begin{equation} \label{eq:107}
+\braket{n_i^2}=\Gamma+2\Gamma^2,
+\end{equation}
+
+\begin{equation} \label{eq:108}
+\braket{n_i^3}=\Gamma+6\Gamma^2+5\Gamma^3.
+\end{equation}
+
+\begin{equation} \label{eq:109}
+\braket{n_i^m}=p_1+2^mp_2+3^mp_3+\cdots,
+\end{equation}
+
+\begin{equation} \label{eq:110}
+\left\{
+\begin{array}{l}
+p_0+p_1+p_2+p_3+\cdots=1;\\
+~~~~p_1+2p_2+3p_3+\cdots=\Gamma;\\
+~~~~p_1+4p_2+9p_3+\cdots=\Gamma+2\Gamma^2;\\
+~~~p_1+8p_2+27p_3+\cdots=\Gamma+6\Gamma^2+5\Gamma^3.\\
+~~~~~~~~~~~~~~~\cdots
+\end{array}
+\right.
+\end{equation}
+
+\begin{equation} \label{eq:111}
+\left\{
+\begin{array}{l}
+p_0=1-\Gamma+\Gamma^2-(5/6)\Gamma^3;\\
+p_1=\Gamma-2\Gamma^2+(5/2)\Gamma^3;\\
+p_2=\Gamma^2-(5/2)\Gamma^3;\\
+p_3=(5/6)\Gamma^3.
+\end{array}
+\right.
+\end{equation}
+
+\begin{equation*}
+\Gamma(1)=\tfrac{1}{2}(J_D-1),
+\end{equation*}
+
+\begin{equation} \label{eq:112}
+p_0=0.93~~p_1=0.06;~~p_2=0.01.
+\end{equation}
+
+
+%%===========================================================
+%%===========================================================
+
+\section{铁氧体的简谐近似} \label{sec:9}
+
+
+\begin{eqnarray} \label{eq:113}
+&&\mathcal{H}=2J\sum\nolimits_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j-(H+H_{A1})g_1\beta\sum\nolimits_iS_{iz}\nonumber\\
+&&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-(H-H_{A2})g_2\beta\sum\nolimits_jS_{jz}
+\end{eqnarray}
+
+\begin{equation} \label{eq:114}
+n_i=S_1-m_i,~~n_j=S_2+m_j.
+\end{equation} 
+
+\begin{eqnarray} \label{eq:115}
+&&\mathcal{H}=E_0''+2J(S_1S_2)^\frac{1}{2}\sum\nolimits_{\mathit{nei}}(Q_iQ_j-P_iP_j)-2J\sum\nolimits_\mathit{nei}n_in_j\nonumber\\
+&&~~~~~~~~~~~~~~~~~+[2JS_2z+g_1\beta(H+H_{A1})]\sum\nolimits_in_i\nonumber\\
+&&~~~~~~~~~~~~~~~~~~~~~~+[2JS_1z+g_2\beta(H-H_{A2})]\sum\nolimits_jn_j,
+\end{eqnarray}
+
+\begin{eqnarray} \label{eq:116}
+&&E_0''=-NzJS_1S_2-N(g_1S_1-g_2S_2)\beta H+\nonumber\\
+&&~~~~~~~~~~~~~~~~~~~~~~~~~~~~-Ng_1S_1\beta H_{A1}-Ng_2S_2\beta H_{A2}.
+\end{eqnarray}
+
+\begin{eqnarray} \label{eq:117}
+&&\hslash\omega_{1k},\hslash\omega_{2k}\nonumber\\
+&&~~~=\{[J(S_1+S_2)z+(K_1+K_2)+\tfrac{1}{2}(g_1-g_2)\beta H]^2\nonumber\\
+&&~~~~~~~-4J^2z^2S_1S_2\gamma_k^2\}^\frac{1}{2}\pm[j(S_2-S_1)z\nonumber\\
+&&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\tfrac{1}{2}(g_1+g_2)\beta H+(K_1-K_2)],
+\end{eqnarray}
+
+\begin{equation} \label{eq:118}
+K_1=\tfrac{1}{2}g_1\beta H_{A1};~~K_2=\tfrac{1}{2}g_2\beta H_{A2}.
+\end{equation}
+
+\begin{equation} \label{eq:119}
+\hslash\omega_{1k}=\frac{g_1S_1-g_2S_2}{S_1-S_2}\beta H+\frac{2JS_1S_2}{S_1-S_2}\sum\nolimits_aa^2k^2\cos\theta_{k,a}.
+\end{equation}
+
+\begin{equation} \label{eq:120}
+M_z=M_{z0}\left[1-0.1187\left\{\frac{kT(S_1-S_2)}{2JS_1S_2}\right\}^\frac{3}{2}\right],
+\end{equation} 
+
+\begin{equation} \label{eq:121}
+C_V=cNk\left(\frac{S_1-S_2}{4JS_1S_2}\right)(kT)^\frac{3}{2},
+\end{equation}
+
+\begin{equation} \label{eq:122}
+\hslash\omega_k=[4J^2S^2z^2(1-\gamma_k^2)]^\frac{1}{2}=2JSka[z\sum\nolimits_a\cos^2\theta_{k,a}]^\frac{1}{2}.
+\end{equation}
+
+\begin{equation} \label{eq:123}
+\hslash\omega_k=2JSkl(2z)^\frac{1}{2},
+\end{equation}
+
+\begin{eqnarray} \label{eq:124}
+&&U=2(L/2\pi)^34\pi\int_0^\infty\frac{[2JSk_0l(2z)^\frac{1}{2}]k_0^2\mathrm{d}k}{\exp(2JSk_0l(2z)^\frac{1}{2}/kT)-1}\nonumber\\
+&&~~=2(L/l)^3\frac{(kT)^4}{2\pi^2[2JS(2z)^\frac{1}{2}]^3}\\
+&&~~~~~~~~~~~~~~~~~~~~~~~~~\times\int_0^\infty V^3(e^{-V}+e^{-2V}+\cdots)\mathrm{d}V.\nonumber
+\end{eqnarray}
+
+\begin{equation} \label{eq:125}
+C_V=2\left(\frac{L}{l}\right)^3\frac{4!k}{2\pi^2}\left(\frac{kT}{2JS(2z)^\frac{1}{2}}\right)^3\zeta(4).
+\end{equation}
+
+\begin{equation} \label{eq:126}
+C_V=13.7Nk(kT/12JS)^3,
+\end{equation}
+
+
+%%===========================================================
+%%===========================================================
+
+\section{自旋-弛豫过程的简谐振子模型} \label{sec:10}
+
+
+\begin{equation} \label{eq:127}
+\sum\nolimits_{\mathit{ijk}}(a_\mathit{ijk}Q_iQ_jq_k+b_\mathit{ijk}P_iP_jq_k),
+\end{equation}
+
+
+%%===========================================================
+%%===========================================================
+
+\section{海特勒-伦敦（Heitler-London）模型以外的自旋波理论的有效性问题} \label{sec:11}
+
+
+\begin{eqnarray} \label{eq:128}
+&&-2\sum\nolimits_{j>i}J_{ij}\mathbf{S}_i\cdot\mathbf{S}_j=-2J\sum\nolimits_{j>i}\mathbf{S}_i\cdot\mathbf{S}_j\nonumber\\
+&&~~~~~~~~~~~~~~~~~~~~~~~~=-J[(\sum\nolimits_i\mathbf{S}_i)^2-\sum\nolimits_i(\mathbf{S}_i)^2]\nonumber\\
+&&~~~~~~~~~~~~~~~~~~~~~~~~~~~=-J[S'(S'+1)-NS(S+1)].
+\end{eqnarray}
+
+\begin{equation*} 
+E=-2S\sum\nolimits_\mathit{ij}J_\mathit{ij}\exp(i\mathbf{k}\cdot\mathbf{R}_\mathit{ij})=-2JNS\sum\nolimits_j\exp(i\mathbf{k}\cdot\mathbf{R}_\mathit{ij}).
+\end{equation*}
+
+\begin{equation} \label{eq:129}
+\left\{
+\begin{array}{l}
+E=-2JNS~~~\text{对于}~k=0;\\
+E=0~~~~~~~~~~~~\text{对于}~k\neq 0.
+\end{array}
+\right.
+\end{equation}
+
+\section*{致谢}
+其中一位作者范克兰东克（JVK）希望感谢荷兰纯科研组织（ZWO）的资助，这使得他得以在1953年留在哈佛大学来写作这篇文章的部分内容。
+
+\end{document}
+
+
+
+
+
+
+
