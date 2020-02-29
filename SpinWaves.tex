@@ -110,31 +110,39 @@ $\mathbf{S}_i$分量的矩阵相对于$n_i$具有\eqref{eq:4}式的形式，但�
 
 自旋矩阵\eqref{eq:4}与众所周知的简谐振子坐标和动量矩阵之间的相似性是当前处理自旋波方法的起点。本章解释了这种方法如何被用于没有偶极修正\eqref{eq:2}的铁磁体情况。反铁磁体的情况将在第\ref{sec:7}-\ref{eq:8}章中进行讨论。
 
+考虑一个质量为$m$角频率为$\omega$的线性谐振子。这个谐振子的坐标$x$和动量$p$中不为零的矩阵元可以写作
 \begin{equation} \label{eq:5}
 \begin{array}{l}
 \bra{n}x\ket{n+1}=\bra{n+1}x\ket{n}=(\hslash/2m\omega)^{\frac{1}{2}}(n+1)^{\frac{1}{2}},\\
 \bra{n}p\ket{n+1}=\bra{n+1}p\ket{n}^*=-i(\hslash m\omega/2)^{\frac{1}{2}}(n+1)^{\frac{1}{2}},
 \end{array}
 \end{equation}
-
+其中$n$现在对应于谐振子激发的量子数，即，
 \begin{equation} \label{eq:6}
 \left<n\left|\frac{1}{2m}p^2+\frac{1}{2}m\omega^2x^2-\frac{1}{2}\hslash\omega\right|n\right>=n\cdot\hslash\omega.
 \end{equation}
-
+当我们引入两个无量纲的变量
 \begin{equation} \label{eq:7}
 Q=(m\omega/\hslash)^{\frac{1}{2}}x\text{~~和~~}P=(\hslash m\omega)^{-\frac{1}{2}}p,
 \end{equation}
-
+我们可以把\eqref{eq:5}式和\eqref{eq:6}式改写成下面的形式：
 \begin{eqnarray} \label{eq:8}
 &&\bra{n}S^{\frac{1}{2}}Q\ket{n+1}=\bra{n+1}S^{\frac{1}{2}}Q\ket{n}=\tfrac{1}{2}(n+1)^{\frac{1}{2}}(2S)^{\frac{1}{2}};\nonumber\\
 &&\bra{n}S^{\frac{1}{2}}P\ket{n+1}=\bra{n+1}S^{\frac{1}{2}}P\ket{n}^*=-\tfrac{1}{2}i(n+1)^{\frac{1}{2}}(2S)^{\frac{1}{2}};\\
 &&\bra{n}S-\tfrac{1}{2}(P^2+Q^2-1)\ket{n}=S-n.\nonumber
 \end{eqnarray}
 
+将这些表达式与\eqref{eq:4}式中自旋分量的矩阵元相比较，我们看到两组矩阵之间有惊人的相似性。两组矩阵仅在对角线上或沿对角线的方向具有不消失的矩阵元，并且这些矩阵元的值密切相关。然而，还是有两个重要的区别，即：
+
+（i）矩阵\eqref{eq:8}是无限维度的，而\eqref{eq:4}式中的自旋矩阵只有$(2S+1)$-维。或者换一种说法，自旋矩阵\eqref{eq:4}和矩阵\eqref{eq:8}一样都是无限维度的，但是其中所有$n>2S$的矩阵元都等于$0$而不是等于式\eqref{eq:8}中的值。
+
+（ii）自旋矩阵\eqref{eq:4}中出现的因子$(2S-n)^\frac{1}{2}$在简谐振子矩阵\eqref{eq:8}中被$(2S)^\frac{1}{2}$替换。我们注意到，对于任何$S$值，式\eqref{eq:4}中连接前两个态$n=0$和$n=1$的矩阵元和\eqref{eq:8}式中的相等。尽管相比于$2S$，$n$很小，但当$n$取较大值时对应的矩阵元大约都相等。
+
+现在我们用简谐振子矩阵\eqref{eq:8}来代替\eqref{eq:1}式的自旋系统哈密顿量中的自旋矩阵\eqref{eq:4}，也就是说，让我们来做以下替换：
 \begin{equation} \label{eq:9}
 S_x=S^{\frac{1}{2}}Q;~~S_y=S^{\frac{1}{2}}P;~~S_z=S-\tfrac{1}{2}(P^2+Q^2-1).
 \end{equation}
-
+我们就得到了以下哈密顿量表达式：
 \begin{eqnarray} \label{eq:10}
 &\mathcal{H}=-Hg\beta\sum\nolimits_i[S-\tfrac{1}{2}(P_i^2+Q_i^2-1)]\nonumber\\
 &\phantom{~~~~}-2JS\sum\nolimits_{\mathit{nei}}(P_iP_j+Q_iQ_j)+\nonumber\\
@@ -142,47 +150,57 @@ S_x=S^{\frac{1}{2}}Q;~~S_y=S^{\frac{1}{2}}P;~~S_z=S-\tfrac{1}{2}(P^2+Q^2-1).
 &\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\times[S-\tfrac{1}{2}(P_j^2+Q_j^2-1)].
 \end{eqnarray}
 
+尽管温度很低以至于每个谐振子的$n_i\geqslant 2$态并没有被适当的激发，\eqref{eq:10}式中的哈密顿量描述的耦合简谐振子系统的性质和\eqref{eq:1}式中的自旋系统的性质是相同的。然而在更高温度时，偏差就出现了。对于$S=\frac{1}{2}$，当适当地激发$n\geqslant 2$的能级时，忽略排斥相互作用是不合理的，而对于较大的$S$值，会产生附加修正，因为在较高的温度下，$(2S-n)^\frac{1}{2}$因子可能不再由$(2S)^\frac{1}{2}$代替。谐振子系统\eqref{eq:8}的性质与自旋系统\eqref{eq:1}性质之间的偏差是自旋变量“非谐性”的结果，即自旋矩阵\eqref{eq:4}与简谐振子矩阵\eqref{eq:8}之间的偏差导致的。
+
+可以通过在$P$和$Q$中添加高阶（非协性）项来改进\eqref{eq:9}式的近似，从而不仅使对应于$n=0$和$n=1$的矩阵元一致，而且使对应于$n=2$的矩阵元一致等等，\eqref{eq:9}式中的每个附加项都考虑到了与下一个较高$n$值相对应的下一组矩阵元。我们将说明$S=\frac{1}{2}$时的过程。当我们引入量$S^\pm=S_x\pm iS_y,~a=2^{-\frac{1}{2}}(Q+iP)$和$a^*=2^{-\frac{1}{2}}(Q-iP)$时，我们可以写出\eqref{eq:9}式一阶近似的形式
 \begin{equation} \label{eq:11}
 S^+=(2S)^{\frac{1}{2}}a;~~S^-=(2S)^{\frac{1}{2}}a^*;~~S_z=S-a^*a.
 \end{equation}
-
+\eqref{eq:11}式中的右手边的前四个矩阵元（在态$n=0$和$n=1$之间的那些元素）等于左手边的对应矩阵元。在下一级近似中，我们可以替换\eqref{eq:11}式来使对应于态$n=0,~1,$和$2$的九个矩阵元相一致
 \begin{equation} \label{eq:12}
 \begin{array}{c}
 S^+=(2S)^{\frac{1}{2}}(a-a^*aa);~~S^-=(2S)^{\frac{1}{2}}(a^*-a^*a^*a);\\
 S_z=S-a^*a+a^*a^*aa;
 \end{array}
 \end{equation}
+我们可以通过写出\eqref{eq:12}中的矩阵来很简单的验证。对于$S>\frac{1}{2}$，可以以类似的方式考虑出现在$n\leqslant 2S$处的因子$(1-n/2S)^\frac{1}{2}$和现在出现在$n>2S$处的斥力。在文献中，已经报道了许多尝试通过展开平方根$(1-n/2S)^\frac{1}{2}$为$n/2S$的级数并且仅保留前几项来改进\eqref{eq:11}式中的近似，但是忽略了$n>2S$时自旋矩阵\eqref{eq:4}的消失所对应的“排斥”相互作用。
 
+这样，对应于$n\leqslant 2S$的所有矩阵元都被部分修正（这仅对$S>\frac{1}{2}$有意义），而在本方法中（也适用于$S=\frac{1}{2}$）逐次近似\eqref{eq:11}，\eqref{eq:12}等等，使连续的矩阵元具有正确的值\eqref{eq:4}。但是应注意，不确定该近似过程是否收敛。由于我们目前仅对常规自旋波近似感兴趣，因此在此不再讨论这一点。
+
+通常的自旋波近似不仅忽略自旋变量的非谐性（即使用一阶近似\eqref{eq:9}）而且还忽略自旋偏差间的附加吸引作用。这种相互作用是由哈密顿量\eqref{eq:10}中最后一项中的四次项表示的。在$J>0$时公式\eqref{eq:10}中的四次方项前是负号的事实，在物理上可以被解释为一种自旋偏差间的相互吸引作用。当这些项被忽略时，\eqref{eq:10}式中的哈密顿量变成
 \begin{eqnarray} \label{eq:13}
 &&\mathcal{H}=E_0'+g\beta(H+H_E)\sum\nolimits_i\tfrac{1}{2}(P_i^2+Q_i^2-1)+\nonumber\\
 &&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}-2JS\sum\nolimits_{\mathit{nei}}(P_iP_j+Q_iQ_j),
 \end{eqnarray}
-
+其中
 \begin{equation*}
 H_E=2JSz/g\beta.
 \end{equation*}
-
+这里，并且贯穿全文，$z$代表给定原子的最近邻原子数。$H_E$是我们熟悉的饱和分子场，上式中的常数为
 \begin{equation} \label{eq:14}
 E_0'=-NHg\beta S-\tfrac{1}{2}Nz\cdot 2JS^2,
 \end{equation}
+是所有自旋平行于外场的完全饱和状态下的能量。
 
+从\eqref{eq:13}式中我们可以看到，公式\eqref{eq:1}中的哈密顿量现在简化为$N$个由（简化的）坐标和动量 $Q_i$和$P_i$描述的耦合简谐振子系统的哈密顿量。除了\eqref{eq:13}式的最后一项表示相邻协振子之间的耦合（仔细地将其与相邻自旋偏差之间的相互作用加以区别），表达式\eqref{eq:13}的形式正如我们现在将要展示的那样，该表达正是我们期望的形式。因为我们忽略了自旋偏差间的相互作用，我们可能假设每个自旋偏差都被没有自旋偏差的原子包围。那么在一个特定原子上有一个自旋偏差的状态与在那个原子上没有自旋偏差的相应状态之间的能量差就由下式给出：
 \begin{eqnarray} \label{eq:15}
 &&\Delta E=[-Hg\beta(S-1)-2JzS(S-1)]\nonumber\\
 &&\phantom{~~~~~~~~~~~~~~~~~~~}-[-Hg\beta S-2JzS^2]=g\beta(H+H_E),
 \end{eqnarray}
-
+如果我们忽略了对应于\eqref{eq:13}式中的耦合项的自旋$x$和$y$分量的影响。当我们想要用一个简谐振子代替自旋，我们必须要求简谐振子的第一激发能等于引入一个孤立的自旋偏差所需要的能量，即必须使谐振子的$\hslash\omega$等于\eqref{eq:15}式中的能量。再次忽略临近简谐振子之间的耦合，我们可以得到哈密顿量
 \begin{equation} \label{eq:16}
 \mathcal{H}_0=\sum_i(\frac{1}{2m}p_i^2+\frac{1}{2}m\omega^2x_i^2-\frac{1}{2}\hslash\omega)+E_0',
 \end{equation}
+其中$E'_0$由\eqref{eq:14}式给出并且等于所有谐振子处于基态时的能量。当我们根据\eqref{eq:7}式调整坐标和动量，并使$\hslash\omega$等于\eqref{eq:15}式中的能量时，表达式\eqref{eq:16}与\eqref{eq:13}相同，除了耦合项，即涉及对临近原子的求和项，消失了。在伊辛模型中，该项毫无疑问地被忽略，但是对于本文或自旋波的任何其他处理而言，这都是非常重要的。
 
+寻找耦合谐振子系统的简正模式的问题是一个简单的问题，所需的变换是众所周知的斯拉特（Slater）变换，无论是对于行波
 \begin{equation} \label{eq:17}
 \begin{array}{l}
 Q_k=(1/N)^{\frac{1}{2}}\sum\nolimits_{i}\exp(i\mathbf{k}\cdot\mathbf{r}_i)Q_i;\\
 P_k=(1/N)^{\frac{1}{2}}\sum\nolimits_{i}\exp(-i\mathbf{k}\cdot\mathbf{r}_i)P_i;
 \end{array}
 \end{equation}
-
-
+或者真正的驻波
 \begin{subequations} \label{eq:18}
 \begin{equation}
 k_x \geqslant 0 \left\{
@@ -201,44 +219,56 @@ P_k=(2/N)^{\frac{1}{2}}\sum\nolimits_{i}\cos(\mathbf{k}\cdot\mathbf{r}_i)P_i.
 \right.
 \end{equation}
 \end{subequations}
+$\mathbf{k}$值的选择需要一些说明。通常会引入所谓的周期性或冯·卡门边界条件，这意味着波函数在穿过晶格后会恢复为其原始值。恰如其分地表达是，这种边界条件的施加意味着在晶体最边缘的自旋仍有临近原子，而不因为处在一侧边缘就没有临近原子。做出这种不真实的假设是为了将所有自旋情况放在同一个水平上，从而使该问题具有充分的周期性，从而简化了分析过程。只要晶体很大，使用这种边界条件所涉及的误差就可以忽略不计，除非存在长程作用力。（然而偶极相互作用可能会导致麻烦，因为它仅以$1/r^3$衰减）。在周期性边界条件下，矢量$\mathbf{k}/2\pi$的允许值通常由晶体所谓的倒格子中的格点表示。对于简单立方晶格和边长为$L$的立方晶体，$k_x,~k_y,$和$k_z$的允许值是$2\pi/L$的整数倍。
 
+就驻波幅度\eqref{eq:18}而言，公式\eqref{eq:13}中的哈密顿量有如下形式
 \begin{equation} \label{eq:19}
 \mathcal{H}=\sum\nolimits_k\tfrac{1}{2}(P_k^2+Q_k^2-1)\hslash\omega_k+E_0',
 \end{equation}
-
+其中
 \begin{equation} \label{eq:20}
 \hslash\omega_k=Hg\beta+2JS[z-\sum\nolimits_a\cos(\mathbf{k}\cdot\mathbf{a})],
 \end{equation} 
+求和遍及$z$个矢量$\mathbf{a}$，矢量$\mathbf{a}$连接某个原子核其$z$个临近原子。
 
+根据式\eqref{eq:18}和\eqref{eq:7}中的定义，很容易就可以证明算符的本征值为
 \begin{equation*}
 \mathfrak{n}_k=\tfrac{1}{2}(P_k^2+Q_k^2-1),
 \end{equation*}
-
+是$0,~1,~2,~\cdots$，所以式\eqref{eq:19}中的哈密顿量的本征值由下式给出
 \begin{equation} \label{eq:21}
 E(\mathfrak{n}_k)=\sum\nolimits_k\mathfrak{n}_k\cdot\hslash\omega_k+E_0',
 \end{equation}
+其中，简正模式$\mathbf{k}$的频率由式\eqref{eq:20}的色散关系给出。我们使用德语字母$\mathfrak{n}_k$来指定与晶体的各种自旋波相关的量子数，以便将它们与自旋偏差算符或单个原子的量子数区分，我们用$n_i$表示，当包括原子间的交换耦合时，它们不是好的量子数。$\mathfrak{n}_k$或$n_i$每增加一个单位，晶体在$z$方向上的总自旋便减少一个单位的，而$\sum_k\mathfrak{n}_k$或$\sum_i n_i$都可以很好地给出晶体的总旋转偏差。
 
+
+公式\eqref{eq:20}和\eqref{eq:21}中的结果是众所周知的自旋波近似下自旋系统\eqref{eq:1}低能级的表达式。可用于求出低温下铁磁自旋系统的配分函数。然而，只有在温度很低以至于可以用$k$的级数展开色散关系\eqref{eq:20}的右边部分并且仅保留二次项时，该计算才是可行的。如果我们这样做，式\eqref{eq:20}变成
 \begin{equation} \label{eq:22}
 \hslash\omega_k=Hg\beta+JS\sum\nolimits_aa^2k^2\cos^2\theta_{k,a},
 \end{equation}
-
+其中$\theta_{k,a}$是矢量$\mathbf{a}$和$\mathbf{k}$间的夹角。对于任何立方阵列，$\cos^2\theta_{k,a}$可以用其平均值$\frac{1}{3}$代替。此外，对于一个简单、体心或者面心晶格，我们有$za^2=6l^2$，其中$l$是初基原胞的长度，所以
 \begin{equation} \label{eq:23}
 \hslash\omega_k=Hg\beta+2JSk^2l^2.
 \end{equation}
 
 
+
 %%===========================================================
 %%===========================================================
 
-\section{自旋波近似下铁磁质的磁化强度和比热} \label{sec:4}
+\section{自旋波近似下铁磁体的磁化强度和比热} \label{sec:4}
 
+通常通过设置配分函数，并注意自旋波基本上对应于波色-爱因斯坦统计的各种激发可能性，从式\eqref{eq:22}获得磁化强度对温度的依赖性。但是，我们可以通过深入使用简谐振子的形式更简单地获得结果。一个角频率为$\omega_k$的简谐振子的能级，除了基态时的半量子数，对于连续的量子数$\mathfrak{n}_k=1,~2,~\cdots$分别为$\hslash\omega_k,~2\hslash\omega_k,~\cdots$。众所周知的相应平均能量是
 \begin{equation} \label{eq:24}
 \bar{E}_k=\frac{\hslash\omega_k}{\exp(\hslash\omega_k/kT)-1}.
 \end{equation}
-
+没有自旋波，对$\mathfrak{n}_k=1,~2,~\cdots$自旋偏差数分别是$1,~2,~\cdots$。因此谐振子$\omega_k$的平均能量和对应的平均自旋偏差仅仅差了一个因子$\hslash\omega_k$。则不同自旋波的总自旋偏差为
 \begin{equation} \label{eq:25}
 \braket{NS-S_z'}_{A_V}=\sum\nolimits_k[\exp(\hslash\omega_k/kt)-1]^{-1},
 \end{equation}
+其中求和遍及$\mathbf{k}$-晶格中所有允许的格点
+
+
 
 \begin{eqnarray} \label{eq:26}
 &&M_{z0}-M_{z}=g\beta\left(\frac{L}{2\pi}\right)^3\nonumber\\
