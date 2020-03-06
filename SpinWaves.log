@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.9.22)  6 MAR 2020 14:13
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.9.22)  6 MAR 2020 15:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1629,19 +1629,19 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 Missing character: There is no 量 in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 级 in font [lmroman10-regular]:mapping=tex-text;!
  [16] [17] [18] [19] [20] [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 882.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 890.
  [22]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 882.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 890.
 
 (./SpinWaves.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 882.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 882.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 882.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 890.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 890.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 890.
  ) 
 Here is how much of TeX's memory you used:
  27271 strings out of 493005
  523291 string characters out of 6134596
- 570912 words of memory out of 5000000
+ 570944 words of memory out of 5000000
  30953 multiletter control sequences out of 15000+600000
  21425 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
