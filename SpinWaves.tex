@@ -59,7 +59,7 @@ anchorcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}% add hypertext capabi
 \end{equation}
 其中$\beta$是玻尔磁子$e\hslash/2mc$，$g$是朗德因子，约等于$2$，而$\mathbf{S}_i$是原子$i$的自旋角动量，为$\hslash$的倍数，并假设所有的磁性原子有相同的自旋量子数$S$。公式\eqref{eq:1}中的第一项是自旋在一个大小为$H$的磁场中的塞曼能，我们假设磁场方向沿着$z$轴。第二项为交换能；关于交换能与两个自旋矢量的标量积成正比的证明是十分标准的，我们在此就忽略了。我们约束研究对象为简单晶格，并假设除了最近邻原子之间，其他交换能可以忽略。现在所有没有消失的交换积分都等于$J$，并且式\eqref{eq:1}中仅对最邻近原子求和，正如全文习惯使用的下标$\mathit{nei}$所示。耦合常数$J$等于最邻近原子的交换积分，对于铁磁体为正数，对于反铁磁为负数。在更普遍的情况中，交换能的形式为$-2\sum_{j>i}J_{ij}\mathbf{S}_i\cdot\mathbf{S}_j$，并且无论相对距离的大小，对晶体中所有的原子对求和。如果晶格是规则的并且不考虑边界效应，这仍然可以当作自旋波来处理，但是对于这种情况，我们将不给出明确的推导；这个过程其实类似于我们现在所用的方法。
 
-自旋波的所有计算均基于矢量或海森堡模型，其中耦合常数与标量积$\mathbf{S}_{i}\cdot\mathbf{S}_{j}$成正比；伊辛模型则任意地使用了一个势能$S_{iz}S_{jz}$。从数学的角度来看，这是一种简化，因为每个单独的$S_{iz}$是运动的常数，而且可以被量化。但是，量子力学的交换效应实际上导致了矢量形式。因此，伊辛模型是纯粹学术化抽象。实际上，它根本不给出任何自旋波，而自旋波理论最重要的是处理比伊辛模型更真实的情况。
+自旋波的所有计算均基于矢量或海森堡模型，其中耦合常数与标量积$\mathbf{S}_{i}\cdot\mathbf{S}_{j}$成正比；伊辛模型则任意地使用了一个势能$S_{iz}S_{jz}$。从数学的角度来看，这是一种简化，因为每个单独的$S_{iz}$是运动常数，而且可以被量化。但是，量子力学的交换效应实际上导致了矢量形式。因此，伊辛模型是纯粹学术化抽象。实际上，它根本不给出任何自旋波，而自旋波理论最重要的是处理比伊辛模型更真实的情况。
 
 除了式\eqref{eq:1}中包含的各向同性耦合（这么称呼是因为标量积$\mathbf{S}_{i}\cdot\mathbf{S}_{j}$仅依赖于矢量$\mathbf{S}_i$和$\mathbf{S}_j$之间的角度，与他们合成之后的方向无关），实际上存在各向异性相互作用，其中最低次项是“偶极”或者“张量”结构
 \begin{equation} \label{eq:2}
@@ -69,7 +69,7 @@ anchorcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}% add hypertext capabi
 \begin{equation} \label{eq:3} 
 D_{\mathit{ij}}=g^2\beta^2/r_\mathit{ij}^3.
 \end{equation}
-然而，现在普遍认为$D_{ij}$的非经典值以及在很短原子间距离处有更大的数量级，可能是由于自旋轨道耦合的间接影响，而这是由复杂的扰动机制引起的，我们在此不作描述。这样的$D_{ij}$非经典值经常被认作是“假偶极”或者“各向异性交换”耦合。最重要的经典偶极耦合效应是长程的。因此当\eqref{eq:3}式中的$D_{ij}$带入\eqref{eq:2}式时，重要的是求和将不受限制，不再局限于最近邻原子。另一方面，$D_{ij}$的非经典部分相对而言是短程的，就像$J_{ij}$。
+然而，现在普遍认为$D_{ij}$的非经典值以及在很短原子间距离处有更大的数量级，可能是由于自旋轨道耦合的间接影响，而这是由复杂的扰动机制引起的，我们在此不作描述。这样的$D_{ij}$非经典值经常被认作是“赝偶极”或者“各向异性交换”耦合。最重要的经典偶极耦合效应是长程的。因此当\eqref{eq:3}式中的$D_{ij}$代入\eqref{eq:2}式时，重要的是求和将不受限制，不再局限于最近邻原子。另一方面，$D_{ij}$的非经典部分相对而言是短程的，就像$J_{ij}$。
 
 公式\eqref{eq:2}中表达了两个原子（如果它们的自旋是$\frac{1}{2}$，并且关于它们中心连线对称）间最普遍的各向异性耦合。对于自旋大于$\frac{1}{2}$，还有四极耦合项，如
 \begin{equation*}
@@ -106,9 +106,9 @@ $\mathbf{S}_i$分量的矩阵相对于$n_i$具有\eqref{eq:4}式的形式，但�
 %%===========================================================
 %%===========================================================
 
-\section{铁磁体的简谐近似} \label{sec:3}
+\section{铁磁性的简谐近似} \label{sec:3}
 
-自旋矩阵\eqref{eq:4}与众所周知的简谐振子坐标和动量矩阵之间的相似性是当前处理自旋波方法的起点。本章解释了这种方法如何被用于没有偶极修正\eqref{eq:2}的铁磁体情况。反铁磁体的情况将在第\ref{sec:7}-\ref{eq:8}章中进行讨论。
+自旋矩阵\eqref{eq:4}与众所周知的简谐振子坐标和动量矩阵之间的相似性是当前处理自旋波方法的起点。本章解释了这种方法如何被用于没有偶极修正\eqref{eq:2}的铁磁性情况。反铁磁性的情况将在第\ref{sec:7}-\ref{eq:8}章中进行讨论。
 
 考虑一个质量为$m$角频率为$\omega$的线性谐振子。这个谐振子的坐标$x$和动量$p$中不为零的矩阵元可以写作
 \begin{equation} \label{eq:5}
@@ -266,15 +266,14 @@ E(\mathfrak{n}_k)=\sum\nolimits_k\mathfrak{n}_k\cdot\hslash\omega_k+E_0',
 \begin{equation} \label{eq:25}
 \braket{NS-S_z'}_{A_V}=\sum\nolimits_k[\exp(\hslash\omega_k/kt)-1]^{-1},
 \end{equation}
-其中求和遍及$\mathbf{k}$-晶格中所有允许的格点
+其中求和遍及$\mathbf{k}$-晶格中所有允许的格点。在$T=0$时总磁矩在$z$方向上$M_z$对其最大值$M_{z0}$的偏离和平均自旋偏差差一个因子$g\beta$。
 
-
-
+与交换耦合相比，外场的影响通常较小，因此我们可以采用$\hslash\omega_k=2JSk^2l^2$。如果我们假设晶格是立方体，并且用积分来代替求和，我们可以得到
 \begin{eqnarray} \label{eq:26}
 &&M_{z0}-M_{z}=g\beta\left(\frac{L}{2\pi}\right)^3\nonumber\\
 &&\phantom{~~~~~~~}\times\iiint\frac{\mathrm{d}k_x\mathrm{d}k_y\mathrm{d}k_z}{\exp(2JS(k_x^2+k_y^2+k_z^2)l^2/kT)-1},
 \end{eqnarray}
-
+其中$L$是立方晶体的边长，所以$V=L^3$是晶体的总体积，并且在$\mathbf{k}$中间中对整个第一布里渊区积分。在低温时积分可能可以扩展到对整个$\mathbf{k}$空间积分，我们可以得到
 \begin{equation} \label{eq:27}
 \begin{array}{l}
 M_{z0}-M_z\\
@@ -284,30 +283,44 @@ M_{z0}-M_z\\
 \phantom{~~~}=\displaystyle\left(\frac{L}{l}\right)^3\frac{g\beta}{2\pi^2}\left(\frac{kT}{2JS}\right)^{\frac{3}{2}}\frac{\pi^{\frac{1}{2}}}{4}\left(1+\frac{1}{2^{\frac{3}{2}}}+\frac{1}{3^{\frac{3}{2}}}+\cdots\right).
 \end{array}
 \end{equation}
-
+在$T=0$时的饱和磁矩为$M_{z0}=g\beta NS$。对于简单立方晶格$N=(L/l)^3$，所以$M_z$可以被写成下面的形式
 \begin{equation} \label{eq:28}
 \begin{array}{l}
 M_z=M_{z0}\displaystyle\left[1-\left(\frac{kT}{2JS}\right)^{\frac{3}{2}}\left(\frac{1}{4\pi}\right)^{\frac{3}{2}}\frac{1}{S}\zeta(\frac{3}{2})\right]\\
 \phantom{~~~~}=\displaystyle M_{z0}\left[1-0.1187\left(\frac{kT}{2JS}\right)^{\frac{3}{2}}\frac{1}{S}\right].
 \end{array}
 \end{equation}
+这里和其他地方的$\zeta(m)$代表黎曼zeta函数$\sum_n n^{-m}$。对于体心和面心晶格，正如式\eqref{eq:28}中所示，$T^{\frac{3}{2}}$项的系数分别是二分之一和四分之一，对应于$(L/l)^3$是$\tfrac{1}{2}N$和$\tfrac{1}{4}N$而不是$N$的事实。
 
+公式\eqref{eq:28}就是著名的布洛赫（Bloch）结果，即在$T=0$时自发磁矩对其最大值的偏离与$T^\frac{3}{2}$成正比。布洛赫仅考虑了特殊情况$S=\tfrac{1}{2}$。对于任意$S$值的拓展最早由摩勒（M\"oller）给出。$T^\frac{3}{2}$定理适用于任何三维晶格，因为它是\eqref{eq:26}式积分的一般结构所得到的结果。
+
+自旋波理论的一个有趣结论是它无法预言任何一维或者二维晶格的铁磁性，无论临近原子数是多少。这和海森堡所谓的高斯近似相反，它用最近邻原子数作为唯一标准，所以可以预言简单立方和二维六方晶格有相似的行为。一维和二维晶格不存在铁磁性，反映了以下事实：在这些情况下，$\mathbf{k}$空间中的最终积分通常是$\int[\exp(ak^2)-1]k^{n-1}\mathrm{d}k$类型，其中$n$是晶格维数。对于$n=1$或者$2$，该积分在原点处发散，然后平均自旋偏差为无限大。这种状态意味着铁磁有序状态没有稳定性，因此如果维数小于三，则铁磁性将不存在。
+
+可以通过类似于磁矩的计算来获得对比热的贡献。由于自旋波状态的能量与其对磁矩偏差的贡献相差一个系数$\hslash\omega_k/g\beta$，因此固有能量由下式给出
 \begin{equation} \label{eq:29}
 U=\left(\frac{L}{2\pi}\right)^3 4\pi\int_0^\infty\frac{(2JSk_0^2l^2)k_0^2\mathrm{d}k_0}{\exp(2JSk_0^2l^2/kT)-1},
 \end{equation}
-
+而不是式\eqref{eq:27}。按级数展开，就像式\eqref{eq:27}我们可以得到
 \begin{eqnarray} \label{eq:30}
 &&U=\frac{(L/l)^3(2JS)}{2\pi^2}\left(\frac{kT}{2JS}\right)^{\frac{5}{2}}\nonumber\\
 &&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~}\times\int_0^\infty V^4(e^{-V^2}+e^{-2V^2}+\cdots)\mathrm{d}V,
 \end{eqnarray}
-
+所以零外场时比热可以由下式给出
 \begin{equation} \label{eq:31}
 C_V=\mathrm{d}U/\mathrm{d}T=cNk(kT/2JS)^{\frac{3}{2}}
 \end{equation}
-
+其中对于简单立方晶格
 \begin{equation} \label{eq:32}
 c=\tfrac{5}{2}\left(\frac{1}{2\pi^2}\right)\frac{3\pi^{\frac{1}{2}}}{8}\zeta(\tfrac{5}{2})=\frac{15}{8\pi^{\frac{3}{2}}}\zeta(\tfrac{5}{2})=0.113.
 \end{equation}
+对于体心和面心立方晶格，常数$c$的表达式分别有一个额外的因子$\tfrac{1}{2}$或者$\tfrac{1}{4}$。
+
+交换积分和温度下降率为$C_VM_{z0}/(M_{z0}-M_z)$，对于任何具有立方对称性的三维结构，其值为$0.96Nk/2S$。
+
+要强调的是，我们给出的磁化强度和比热公式是基于标准自旋波理论的近似。几位作者已尝试对它们进行修正，以使其获得第\ref{sec:3}章中所描述的吸引和排斥作用，换句话说就是发展了更为完善的理论。不同作者不同意他们的结论，因此，我们不会试图去研究高阶修正这一困难而有争议的问题。最近一次做此尝试的人是戴森（Dyson）。他得出结论：“整个（他的）研究的实际结果简单来说就是，无相互作用的自旋波的线性布洛赫理论足以满足所有实际目的。”
+
+在下一节中，我们将讨论所得到的修正，这不是由于标准的自旋波理论对海森堡或海特勒-伦敦模型的不足，而是因为该模型的一般化包括了偶极结构力。
+
 
 
 %%===========================================================
@@ -315,20 +328,24 @@ c=\tfrac{5}{2}\left(\frac{1}{2\pi^2}\right)\frac{3\pi^{\frac{1}{2}}}{8}\zeta(\tf
 
 \section{偶极结构相互作用的影响} \label{sec:5}
 
+现在，我们研究如何通过自旋偶极耦合叠加在各向同性交换相互作用上来修正与自旋波相关的本征值。这个问题由荷斯坦和普里马科夫首先提出并解决。它比上一节中考虑的纯各向同性问题要复杂得多。其中一个原因是，偶极能量相对于整个晶体的自旋分量不是对角的，因此$\sum_i S_{iz}$不是运动常数（守恒量）。
+
+当加入偶极结构的相互作用，哈密顿函数变成
 \begin{eqnarray} \label{eq:33}
 &&\mathcal{H}=-2J\sum\nolimits_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j+\sum\nolimits_{j>i}D_{ij}[\mathbf{S}_i\cdot\mathbf{S_j}\nonumber\\
 &&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}-3(\boldsymbol{\alpha}_{ij}\cdot\mathbf{S}_i)(\boldsymbol{\alpha}_{ij}\cdot\mathbf{S}_j)].
 \end{eqnarray}
+一般而言，现在在$i$和$j$上的求和必须扩展到晶体中的所有成对原子上，而不是仅扩展到最近邻原子上。单位矢量$\boldsymbol{\alpha}_{ij}$的分量是连接原子$i$和$j$的矢量$\mathbf{r}_{ij}$的方向余弦$\alpha_{ij}$，$\beta_{ij}$和$\gamma_{ij}$。正如介绍部分所说，如果偶极相互作用有真正的电磁学源头则系数$D_{ij}$的值为$g^2\beta^2/r_{ij}^3$。对$D_{ij}$的贡献可以来自于各向异性交换作用，所得到的临近原子的$D_{ij}$值比经典电磁学理论给出的大很多。尽管荷斯坦和普里马科夫使用的是$D_{ij}$的经典值，但是扩展到更一般的“赝偶极”情况不会带来特殊的困难，所以我们不会局限$D_{ij}$在经典值。
 
+通过将\eqref{eq:9}式代入\eqref{eq:33}来引入自旋波近似。所得到的的项可以很容易地根据$P_i$，$Q_i$和$n_i$的升幂序分组，其中$n_i$被定义为
 \begin{equation} \label{eq:34}
 n_i=\tfrac{1}{2}(P_i^2+Q_i^2-1).
 \end{equation}
-
-
+表达式\eqref{eq:34}的物理意义是原子$i$的自旋偏差（参见第\ref{sec:2}节），与$P_i$或$Q_i$相比可以认为是二阶的。当自旋波或者简谐振子近似时，哈密顿函数\eqref{eq:33}变成
 \begin{equation} \label{eq:35}
 \mathcal{H}=-2J\sum\nolimits_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j+D_0+D_1+D_2+D_3+D_4,
 \end{equation}
-
+其中
 \begin{eqnarray}
 &&D_0=S^2\sum\nolimits_{j>i}D_{ij}(1-3\gamma_{ij}^2),\label{eq:36}\\
 &&D_1=-6S^{\frac{3}{2}}\sum\nolimits_{j>i}D_{ij}[\alpha_{ij}\gamma_{ij}Q_j+\beta_{ij}\gamma_{ij}P_j],\label{eq:37}\\
@@ -338,91 +355,106 @@ n_i=\tfrac{1}{2}(P_i^2+Q_i^2-1).
 &&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}+\beta_{ij}\gamma_{ij}(P_in_j+n_iP_j)], \label{eq:39}\\
 &&D_4=\sum\nolimits_{j>i}D_{ij}(1-3\gamma_{ij}^2)n_in_j.\label{eq:40}
 \end{eqnarray}
+其中可以被解释为非谐修正的$D_3$和$D_4$项具有较高的阶数，因此可以忽略。我们现在必须更加仔细的考虑剩下的$D_0$，$D_1$和$D_2$项。
 
+就本征值的计算而言，$D_0$项是可加常数。从物理上讲，它可以被解释为当所有自旋平行于$z$轴时产生的总偶极或赝偶极能量。但是这是仅在无穷大磁场中才能达到的理想条件，因为偶极耦合本身会破坏磁矩的恒定性，所以会抑制完美的平行。如果偶极相互作用是经典类型，则常数$D_0$可以用经典退磁因子$N_z$表示，该因子被定义为
 \begin{equation} \label{eq:41}
 N_z=(V/N)\sum\nolimits_j\boldsymbol{r}_{ij}^{-3}(1-3\gamma_{ij}^2)+(4\pi/3)
 ,\end{equation}
-
-
+$N_x$和$N_y$也有相似的定义。这里$V$是晶体体积，$N/V$是单位体积的自旋数。只有样品中的退磁场是均匀时退磁因子才有意义，这仅在外场沿其中一个轴，并且椭圆形切割样品的情况下才成立，这正是我们的假设。公式\eqref{eq:41}中对$j$的求和与$i$无关。当我们引入饱和磁化强度
 \begin{equation} \label{eq:42}
 M_0=(N/V)g\beta S,
 \end{equation}
-
+并且利用式\eqref{eq:41}，我们可以把式\eqref{eq:36}中的纯经典部分写成下面的形式
 \begin{equation} \label{eq:43}
 D_0=-\tfrac{1}{2}VM_0[(4\pi/3)M_0-N_zM_0].
 \end{equation}
+括号中的部分等于洛伦兹场$(4/3)M_0$和退磁场$-N_zM_0$之和，并且因此等于所谓的有效场，即一个格点处的场强。从式\eqref{eq:43}可以看出$D_0$代表有效场中磁矩的能量。因子$\tfrac{1}{2}$的出现是因为有效场是磁矩本身的结果，所以式\eqref{eq:43}是一种自能。式\eqref{eq:43}的结果证明了退磁因子表达式\eqref{eq:41}的正确性。
 
+由式\eqref{eq:37}给出，并且与$Q_i$和$P_i$呈线性的$D_1$项，可以出于所有实际目的而忽略不计，因为通过引入行波\eqref{eq:17}，可以表明$D_1$的量级比$D_0$和$D_2$小一个因子$N^\frac{1}{2}$。通常$D_1$会更小，因子为$N^\frac{1}{3}$，即与靠近晶体表面的原子数成正比。如果每个原子都有对称面，这个结论对短程力就是成立的。对于
 \begin{equation} \label{eq:44}
 \sum\nolimits_jD_{ij}\alpha_{ij}\gamma_{ij}=\sum\nolimits_jD_{ij}\beta_{ij}\gamma_{ij}=0,
 \end{equation}
+除了靠近晶体表面的原子都成立。对于长程磁性作用力，\eqref{eq:44}式只有在晶体被合适切割时才成立。
 
+二次项$D_2$是偶极项中最重要的。它不能被像\eqref{eq:44}中的关系简化。我们现在的任务就是决定下式的本征值
 \begin{equation} \label{eq:45}
 -2J\sum\nolimits_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j+D_2.
 \end{equation}
-
+第一步就是在$D_2$的表达式\eqref{eq:38}中引入行波\eqref{eq:17}。$D_2$中的第一项就变成了
 \begin{eqnarray} \label{eq:46}
 &&\tfrac{1}{2}N^{-1}S\sum\nolimits_{i,j}D_{ij}(1-3\alpha_{ij}^2)\sum\nolimits_{k,k'}Q_kQ_{k'}\nonumber\\
 &&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}\times\exp[-i\mathbf{k}\cdot\mathrm{r}_i-i\mathbf{k}'\cdot\mathbf{r}_j],
 \end{eqnarray}
-
+其中的求和遍及所有的$i$和$j$而非$i<j$的情况。表达式\eqref{eq:46}可以被改写成
 \begin{eqnarray} \label{eq:47}
 &&\tfrac{1}{2}N^{-1}S\sum\nolimits_{k,k'}Q_kQ_{k'}\sum\nolimits_{i}\exp[-i(\mathbf{k}+\mathbf{k}')\cdot\mathbf{r}_i]\nonumber\\
 &&\phantom{~~~~~~~~~~~~~~~~}\times\sum\nolimits_jD_{ij}(1-3\alpha_{ij}^2)\exp[-i\mathbf{k}'\cdot(\mathbf{r}_j-\mathbf{r}_i)].
 \end{eqnarray}
-
-
+我们现在引入下面的晶格求和
 \begin{equation} \label{eq:48}
 \begin{array}{l}
 A_{xx}(\mathbf{k})=S\sum\nolimits_jD_{ij}(1-3\alpha_{ij}^2)\exp[i\mathbf{k}\cdot(\mathbf{r}_j-\mathbf{r}_i)];\\
 A_{xy}(\mathbf{k})=-3S\sum\nolimits_jD_{ij}\alpha_{ij}\beta_{ij}\exp[i\mathbf{k}\cdot(\mathbf{r}_j-\mathbf{r}_i)];
 \end{array}
 \end{equation}
-
+对于$A_{yy}(\mathbf{k})$，$A_{zz}(\mathbf{k})$，$A_{xx}(\mathbf{k})$和$A_{yz}(\mathbf{k})$也是相似的（这些量显然是一个张量的分量），并且我们可以假设这些量与$\mathbf{r}_i$无关。如果忽略边缘效应对于短程力这是合理的。对于长程磁性作用力，情况就更加复杂了。式\eqref{eq:48}中对$D_{ij}$的求和与$r_{ij}^{-3}$成正比，这已经被海勒（Heller）和马库斯（Marcus）与激发理论联系，以及科恩（Cohen）和凯弗（Keffer）讨论过了。对于$\mathbf{k}=0$，式\eqref{eq:48}中的求和与退磁因子\eqref{eq:41}直接关联，并且对于椭球晶体它们与$\mathbf{r}_i$无关。对于$\mathbf{k}\neq 0$，然而，式\eqref{eq:48}中的量仅对离晶体表面距离远大于波长的原子$i$才和$\mathbf{r}_i$无关，因为相位因子迅速变化导致$r_{ij}$相对于波长较大的$j$项的贡献被抵消了。因此，对于与晶体尺寸相比较小的波长，对于大多数原子，对于远程力，求和\eqref{eq:48}与$\mathbf{r}_i$无关。 我们的假设仅在波长与晶体尺寸相当时不成立。如果我们忽略这些效应的影响，式\eqref{eq:47}中对所有$i$的求和可以由下面的性质立刻得到结果
 \begin{equation} \label{eq:49}
 N^{-1}\sum\nolimits_i\exp(i\mathbf{k}\cdot\mathbf{r}_i)=\delta(\mathbf{k}),
 \end{equation}
-
+其中$\mathbf{k}$第一布里渊区中任何允许的倒格矢。表达式\eqref{eq:47}就可以简化为
 \begin{equation} \label{eq:50}
 \tfrac{1}{2}\sum\nolimits_kA_{xx}(\mathbf{k})Q_kQ_{-k}.
 \end{equation}
-
-
+$D_2$中的其他项可以用同样的方法计算，则最后的$D_2$表达式为
 \begin{eqnarray} \label{eq:51}
 &&D_2=\tfrac{1}{2}\sum\nolimits_k[A_{xx}(\mathbf{k})-A_{zz}(0)]Q_kQ_{-k}\nonumber\\
 &&\phantom{~~~~~~~~~~~~~~~~~~~}+\tfrac{1}{2}\sum\nolimits_k[A_{yy}(\mathbf{k})-A_{zz}(0)]P_kP_{-k}\nonumber\\
 &&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}+\sum\nolimits_kA_{xy}(\mathbf{k})Q_kP_k+\tfrac{1}{2}NA_{zz}(0).
 \end{eqnarray}
 
+对于布拉维式晶体，式\eqref{eq:48}中所有的量都是实数。这时用实驻波\eqref{eq:18}而非行波\eqref{eq:17}就更加方便了。用这些量来表示式\eqref{eq:35}中的哈密顿量（忽略$D_1$，$D_3$和$D_4$项）
 \begin{equation} \label{eq:52}
 \mathcal{H}=\tfrac{1}{2}\sum\nolimits_k[A(\mathbf{k})Q_k^2+B(\mathbf{k})P_k^2+2C(\mathbf{k})Q_kP_k]+E_0''.
 \end{equation}
-
+系数$A$，$B$和$C$由下式给出
 \begin{eqnarray} 
 &&A(\mathbf{k})=\hslash\omega_k^{(0)}+A_{xx}(\mathbf{k})-A_{zz}(0); \label{eq:53}\\
 &&B(\mathbf{k})=\hslash\omega_k^{(0)}+A_{yy}(\mathbf{k})-A_{zz}(0); \label{eq:54}\\
 &&C(\mathbf{k})=A_{xy}(\mathbf{k}); \label{eq:55}
 \end{eqnarray}
-
+其中$\hslash\omega_k^{(0)}$等于无偶极相互作用下一个波矢为$\mathbf{k}$的自旋波的能量\eqref{eq:20}。常数$E_0''$为
 \begin{equation} \label{eq:56}
 E_0''=E_0'+\tfrac{1}{2}N(S+1)A_{zz}(0)-\sum\nolimits_k\tfrac{1}{2}\hslash\omega_k^{(0)},
 \end{equation}
+其中$E_0'$在式\eqref{eq:14}中定义。
 
+通过将方括号中的表达式转换为简单的平方和，可以轻松实现哈密顿量\eqref{eq:52}的对角化。这可以通过正交变换到一组新的变量$Q_k'$和$P_k'$来实现，我们将不写出来。结果为
 \begin{equation} \label{eq:57}
 \mathcal{H}=\sum\nolimits_k\tfrac{1}{2}(Q_k'^2+P_k'^2)(AB-C^2)^{\frac{1}{2}}+E_0''.
 \end{equation}
-
+因为变化是正交的，算符$\tfrac{1}{2}(Q_k'^2+P_k'^2)$的本征值还是$\mathfrak{n}_k+\tfrac{1}{2}$的形式。因此哈密顿量\eqref{eq:57}的本征值可以由下式给出
 \begin{equation} \label{eq:58}
 E(\mathfrak{n}_k)=\sum\nolimits_k\mathfrak{n}_k\cdot\hslash\omega_k+E_0,~~(\mathfrak{n}=0,1,2,\cdots),
 \end{equation}
-
+其中简正模$\mathbf{k}$的频率现在为
 \begin{equation} \label{eq:59}
 \hslash\omega_k=[A(\mathbf{k})B(\mathbf{k})-C(\mathbf{k})^2]^{\frac{1}{2}},
 \end{equation}
-
-
+并且总零点能等于
 \begin{equation} \label{eq:60}
 E_0=E_0''+\tfrac{1}{2}\sum\nolimits_k\hslash\omega_k,
 \end{equation}
+其中$E_0''$由式\eqref{eq:56}给出。
+
+式\eqref{eq:58}的结果表明，在存在偶极相互作用的情况下，自旋系统可以再次由一组简谐振子进行一阶近似描述，其简正模式现在由\eqref{eq:59}给定。式\eqref{eq:59}的结果与第\ref{sec:3}节不同，它涉及一个根号，这反映了哈密顿量\eqref{eq:52}中存在交叉项$Q_kP_k$，如果仅存在各向同性交换耦合则不存在交叉项[参见方程\eqref{eq:19}]。这也可以看作是$S_z'=\sum_i S_{iz}$也不再是运动常数的反映。
+
+现在出现了一个问题：那个特征值相当复杂的公式有什么用？荷斯坦和普里马科夫进行计算主要是为了查看在$T=O$时偶极耦合将饱和磁化强度从对应于完全平行排列的饱和磁化强度降低了多少。结果表明，当用各种常数代替时，通过数值求解求出平均总自旋偏差，由此引起的饱和磁矩的实际减小并不重要，而布洛赫关系$M_0-M=AT^\frac{3}{2}$则不大受到影响。荷斯坦和普里马科夫还研究了固有磁化率$(\partial M/\partial H)$，换句话说，即在易磁化方向已经旋转成平行于所施加磁场的方向之后，磁矩如何受到场强的影响。这个计算非常复杂。他们发现对于大范围场强$(\partial M/\partial H)\propto T/H^\frac{1}{2}$。该结果似乎与有限的可用实验证据一致。
+
+可以借助自旋波研究的另一物理量是接近绝对零度时的铁磁各向异性。这种各向异性可能是由任意$S$的赝偶极耦合引起的，或者是由四极耦合引起的，例如我们在第\ref{sec:1}节中提到的，对于$S\geqslant 1$。在镍中，实验证据表明$S=\tfrac{1}{2}$；因此，这种材料的各向异性为赝偶极子。（纯经典偶极耦合会产生一些各向异性，但数值不足。）在$T=0$时，各向异性来源于零点能\eqref{eq:60}依赖于方向的事实。这种方向依赖性的大小和形式已经由特斯曼（Tessman）给出。通过特定的简化，他的结果和范弗莱克（Van Vleck）在 1937 年基于外斯分子场的半现象学模型得到的结果精确一致。乍一看，结果的一致性似乎非常出色，因为方法不同。但是，在跟踪计算时，由于在任一计算中，在$T=0$时$\Delta S_{zi}=\mp 1$的能量变化都被认为是$\pm 2Jz$（$J$是交换积分和$z$是最近邻原子数），因此可以期望达到一致。因此微扰计算中的“频率分母”是相同的，并且当分母与跃迁无关时，完整性关系或矩阵元平方和不变的光谱稳定性定理可确保结果将是 类似的。范佩普（Van Peip）先前还通过相当复杂的计算（主要是自旋波模型和较少激进的假设）检验了偶极模型的铁磁各向异性。结果与特斯曼或范弗莱克获得的结果相差无几。由四极相互作用产生的各向异性的计算要比由偶极子产生的各向异性更简单，因为它可以从一阶微扰计算中推导出来，而不是从二阶微扰计算中得出。通常的理论利用某种分子场模型。然而，也可以用自旋波来解决各向同性交换耦合的问题，可将四极项叠加视为一个很小的微扰作用在无扰动系统上。这种方法已经被凯弗（Keffer）在一篇有趣的论文中使用过了。最惊人的结果是，与铁的实验一致，各向异性应随磁化强度的十次方而变化。
+
+偶极自旋波理论最有意思的一个应用就是铁磁共振，我们将在下一节中讨论。
+
 
 
 %%===========================================================
@@ -430,73 +462,93 @@ E_0=E_0''+\tfrac{1}{2}\sum\nolimits_k\hslash\omega_k,
 
 \section{铁磁共振吸收的自旋波理论} \label{sec:6}
 
+在铁磁共振吸收的实验中，一个小的振荡磁场$H_x=H_1\cos\omega t$被垂直的施加于一个恒定外场$H$上，假定这个外场沿着$z$方向。正如最早被格里菲斯（Griffith）观测到的那样，从振荡磁场中吸收能量时会发生剧烈的共振。振荡频率的表达式为
 \begin{equation} \label{eq:61}
 \hslash\omega=g\beta\{[H+(N_x-N_z)M][H+(N_y-N_z)M]\}^{\frac{1}{2}}.
 \end{equation}
+在这里，$M$是外场为$H$和温度为$T$时晶体的磁化强度。$N_x$，$N_y$和$N_z$是经典的退磁因子，其微观定义在\eqref{eq:41}中给出。简单的表达式\eqref{eq:61}仅对轴沿着$x$，$y$和$z$方向的椭球晶体成立，并且忽略了各向异性。
 
+表达式\eqref{eq:61}最初由基特尔（Kittel）通过经典理论推导出。量子力学方法的推导有范弗莱克（Van Vleck）给出。两种推导都是基于运动方程的推导，并且都没使用自旋波。这篇文章通过自旋波的方法推导出\eqref{eq:61}式，尽管这并不是最简单的方法去推导\eqref{eq:61}式。乍一看，似乎基特尔的结果与自旋波模型之间存在明显的矛盾，因为后者具有$3N$个简谐振子或简正模，其中$N$是晶体中磁性原子的数量。这些合适的振动频率中的大多数是截然不同的，因此我们可能会期望实际上是连续的共振频率，而不是像\eqref{eq:61}式所预测的那样只有一条线。如下所示，对这个问题的答案是，在实际上无数的自旋波频率中，通常只有一个在磁共振吸收中“活跃”，即只有这一个频率是被磁偶极子辐射的选择定则所允许的。该特定频率是在不同原子的所有自旋中对称的频率，对应于零波矢$\mathbf{k}$。实质上，这一点是由波尔德（Polder）给出的式\eqref{eq:61}的推导得出的，我们的目的是通过我们的谐振子模型得出相同的结果。需要注意的是，和一般自旋波频率不同，式\eqref{eq:61}并没有包括交换积分。如果没有退磁修正，式\eqref{eq:61}中的频率将降低到拉莫尔频率$g\beta H$，和第\ref{sec:3}节中$\mathbf{k}=0$时的特殊例子中的自旋波频率相同[参看方程\eqref{eq:20}]。由于总偶极矩$S_z'=\sum_i S_{iz}$在矩阵乘法中与交换作用能$-2J\sum_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j$对易，因此在铁磁共振中不会出现交换频率。
+
+为了从自旋波理论推导共振频率，我们假设振荡磁场$H_x$的趋肤深度比晶体的尺寸大。则磁场$H_x$就可以被认为是在晶体中均匀分布的，而自旋系统和振荡磁场的相互作用由下式给出
 \begin{equation} \label{eq:62}
 \mathcal{H}'=-H_zg\beta\sum\nolimits_iS_{ix},
 \end{equation}
-
+其中的求和遍及晶体中的所有原子。在自旋波近似中，算符$S_{ix}$被简谐振子坐标$S^{\frac{1}{2}}Q_i$代替，参见方程\eqref{eq:9}，则$\mathcal{H}'$变成
 \begin{equation} \label{eq:63}
 \mathcal{H}'=-H_xg\beta S^{\frac{1}{2}}\sum\nolimits_iQ_i=-H_xg\beta(NS)^{\frac{1}{2}}Q_0,
 \end{equation}
-
+根据方程\eqref{eq:17}，其中的$Q_0$是完全对称的正交坐标$N^\frac{1}{2}\sum_i Q_i$。最终，我们必须对存在偶极相互作用时的正交坐标$Q_k'$和$P_k'$进行正交变换，参见方程\eqref{eq:57}。现在$Q_k'$和$P_k'$仅依赖于具有相同波矢$\mathbf{k}$的$Q_k$和$P_k$，因此$Q_0$仅仅是$Q_0'$和$P_0'$的线性方程。最后$\mathcal{H}'$变成下面的形式
 \begin{equation} \label{eq:64}
 \mathcal{H}'=-H_xg\beta(NS)^{\frac{1}{2}}(aQ_0'+bP_0'),
 \end{equation}
+其中$a$和$b$是式\eqref{eq:53}，\eqref{eq:54}和\eqref{eq:55}中量的函数，它们的精确形式现在是无关紧要的。
 
+自旋系统的能量本征态由量子数$\mathfrak{n}_k$表征，其表示各种简正模式的激发程度，或者等价地表示具有波矢$\mathbf{k}$的激发自旋波的数量。因为$\mathcal{H}'$仅含有零级简正模的变量$Q_0'$和$P_0'$，则$\mathcal{H}'$在$\mathfrak{n}_k$表示下的矩阵元，在态$\mathfrak{n}_0,~\cdots,~\mathfrak{n}_k,~\cdots$和$\mathfrak{n}_0',~\cdots,~\mathfrak{n}_k',~\cdots$中仅当下式成立时不为零
 \begin{equation} \label{eq:65}
 \mathfrak{n}_0'=\mathfrak{n}_0\pm 1~~\text{和}~~\mathfrak{n}_k'=\mathfrak{n}_k~~\text{对于}~~k\neq 0.
 \end{equation}
-
+因此振荡磁场只能激发零级简正模，即零波数的自旋波。这一简正模的频率为
 \begin{equation} \label{eq:66}
 \hslash\omega_0=[A(0)B(0)-C(0)^2]^{\frac{1}{2}},
 \end{equation}
-
+显然等于共振频率。当我们用表达式\eqref{eq:53}，\eqref{eq:54}和\eqref{eq:55}代替$A(0)$，$B(0)$和$C(0)$，式\eqref{eq:66}中的共振频率变成
 \begin{eqnarray} \label{eq:67}
 &&\hslash\omega_0=\{[g\beta H+A_{xx}(0)-A_{zz}(0)]\nonumber\\
 &&\phantom{~~~~~~~~~~~~~~~}\times[g\beta H+A_{yy}(0)-A_{zz}(0)]-A_{xy}(0)^2\}^{\frac{1}{2}}.
 \end{eqnarray}
 
+如果我们假设仅存在纯经典偶极耦合，表达式\eqref{eq:67}就可以简化为基特尔（Kittel）公式\eqref{eq:61}。根据式\eqref{eq:41}和\eqref{eq:48}我们有
 \begin{eqnarray} \label{eq:68}
 &&A_{zz}(0)=S\sum\nolimits_jg^2\beta^2r_{ij}^{-3}(1-3\gamma_{ij}^2)\nonumber\\
 &&\phantom{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}=g\beta N_z(N/V)g\beta S=g\beta N_zM_0,
 \end{eqnarray}
-
+相似的有$A_{xx}(0)$和$A_{yy}(0)$，而$A_{xy}(0)$可能会消失。当这些结果被代入方程\eqref{eq:67}，我们就得到了共振频率
 \begin{equation} \label{eq:69}
 \hslash\omega_0=g\beta\{[H+(N_x-N_z)M_0][H+(N_y-N_z)M_0]\}^{\frac{1}{2}},
 \end{equation}
+这和基特尔的表达式\eqref{eq:61}是一致的，除了磁化强度$M$被饱和磁化强度$M_0$代替了。因此，正如被期待的那样，自旋波理论给出了仅在低温下的共振频率值。
 
+现在让我们来考虑短程偶极作用力。如果晶格是立方对称的，这将对共振频率没有影响。所有的量$A_{xx}(0)$等都一样消失了（除了通常被忽略的表面效应）因为它们将导致对外场与晶轴的方向余弦的二次依赖，而这种二次依赖与立方对称性不相符合。短程力只能通过我们之前忽略的非谐项$D_3$和$D_4$的高阶微扰来影响共振频率。然而，如果没有立方对称性，情况就完全不同了。短程力对量$A_{xx}(0)$等的贡献没有消失，这些作用力导致的各向异性会对共振频率有一个直接影响。正如范弗莱克（Van Vleck）之前讨论过的那样，自旋间的二次耦合导致的各向异性也有相同的作用。
+
+最终，跟随着路丁格（Luttinger）和基特尔（Kittel），我们讨论了共振频率表达式\eqref{eq:61}的另一种推导方式。从振荡磁场和自旋系统间的相互作用与总自旋$\mathbf{J}=\sum_i\mathbf{S}_i$（我们之前用$\mathbf{S}'$表示）对易的事实来看，振荡磁场只能引起有着相同总自旋量子数$J$的态之间的跃迁。因此，为了计算共振频率，我们必须计算与外磁场和退磁场相互作用的磁化晶体的特定J值相对应的态之间的能量差。则以一个大小不变$M$的磁化强度$\mathbf{M}$的函数描述晶体能量的经典哈密顿量由下式给出
 \begin{equation} \label{eq:70}
 \mathcal{H}=-VM_zH+\tfrac{1}{2}V(N_xM_x^2+N_yM_y^2+N_zM_z^2).
 \end{equation}
+路丁格（Luttinger）和基特尔（Kittel）发现为了推导题词共振频率，计算式\eqref{eq:70}的本征值就足够了，而不需要荷斯坦和普里马科夫使用（我们在第\ref{sec:5}中使用过）的那些更复杂的哈密顿函数。路丁格（Luttinger）和基特尔（Kittel）表示，对式\eqref{eq:70}的本征值而言，在一定程度上近似就可以由式\eqref{eq:60}在空间均匀分开。他们的证明使用了一种巧妙，但是某种程度上迂回的方法，一个不同的方程被另一个不同的方程代替，同时量化轴垂直于磁场。而简谐振子一个非常直观的应用，并使用量化轴平行于磁场也可以得到正确的结果。
 
+如果我们假设$M^2=M_x^2+M_y^2+M_z^2$是一个常数，这一假设是合理的因为$M^2$在量子力学中与式\eqref{eq:70}对易，而后，除了一个无趣的附加常数，式\eqref{eq:70}等同于
 \begin{equation} \label{eq:71}
 \mathcal{H}=-VM_zH+\tfrac{1}{2}V[(N_x-N_z)M_x^2+(N_y-N_z)M_y^2].
 \end{equation}
+我们忽略饱和效应，即我们假设$M_z$微偏离其最大值$M$。像布隆伯根（Bloembergen）和王（Wang）观察到的那种出现于极强振荡磁场下的饱和效应，我们在此不作考虑。
 
+通过用$g\beta\mathbf{J}/V$代替$\mathbf{M}$得到对应于式\eqref{eq:71}的量子力学算符，
 \begin{eqnarray} \label{eq:72}
 &&\mathcal{H}=-Hg\beta J_z+\tfrac{1}{2}(g\beta M/J)\nonumber\\
 &&\phantom{~~~~~~~~~~~~~~~~~~~~~~~}\times[(N_x-N_z)J_x^2+(N_y-N_z)J_y^2].
 \end{eqnarray}
-
+我们对$J$取极大值（$10^{20}量级$）时和平均值（$J_z$没有明显偏离$J$）时的式\eqref{eq:72}的本征值感兴趣，这是对经典情况$M_z\approx M$的类比。[如果$N_z\neq N_y$，$J_z$不与式\eqref{eq:72}对易并且不对应于一个好的量子数；则我们必须处理期望或者平均值而非$J_z$的本征值。]但这正是简谐振子近似\eqref{eq:7}的条件，即
 \begin{equation} \label{eq:73}
 J_x=J^{\frac{1}{2}}Q;~~J_y=J^{\frac{1}{2}}P;~~J_z=J-\tfrac{1}{2}(P^2+Q^2-1),
 \end{equation}
-
+是一个极好的近似。当我我们将式\eqref{eq:73}代入\eqref{eq:72}，我们得到
 \begin{equation} \label{eq:74}
 \mathcal{H}=\text{const}+g\beta\tfrac{1}{2}(aQ^2+bP^2),
 \end{equation}
-
+其中$a=H+(N_x-N_z)M$和$b=H+(N_y-N_z)M$。做一个简单的变换，
 \begin{equation} \label{eq:75}
 Q=(b/a)^{\frac{1}{2}}Q',~~P=(a/b)^{\frac{1}{2}}P',
 \end{equation}
-
+则哈密顿量变成
 \begin{equation} \label{eq:76}
 \mathcal{H}=\text{const}+g\beta(ab)^{\frac{1}{2}}\tfrac{1}{2}(P'^2+Q'^2),
-\end{equation} 
+\end{equation}
+可见当$M_z\approx M$时$H$的本征值是均匀地按能量差$g\beta(ab)^\frac{1}{2}$分开。代入$a$和$b$的值，就简化为共振频率的表达式\eqref{eq:61}。
 
+从这一推导和类似的经典推导可以明显看出，对于高能级（$J_z$的平均值和$J$差别很大），均匀分隔的\eqref{eq:61}将导致偏差的出现，因为对于这些态而言，简谐振子近似\eqref{eq:73}不再是一个好的近似。
+
+在结束本节时应该提醒注意的是，通过实验越来越清楚表明，铁磁共振现象通常过于复杂，无法用简单的基特尔公式\eqref{eq:61}描述。有时会出现副峰，特别是在高阶时，必须考虑饱和效应。因为偶极作用力仅按三次幂下降，所以不能像通常那样像样地去掉边界修正，并且由于主模和副模的频率几乎相等而产生干扰，因此会产生重要的失真效果。我们在此不讨论这一复杂但是实际上非常重要的问题，有关这一问题的文献正在快速地增加。应特别参考克拉斯顿（Clogston），苏尔（Suhl），沃克（Walker）和安德森（Anderson）的论文。
 
 %%===========================================================
 %%===========================================================
