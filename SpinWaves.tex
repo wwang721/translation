@@ -106,7 +106,7 @@ $\mathbf{S}_i$分量的矩阵相对于$n_i$具有\eqref{eq:4}式的形式，但�
 %%===========================================================
 %%===========================================================
 
-\section{铁磁性的简谐近似} \label{sec:3}
+\section{铁磁简谐近似} \label{sec:3}
 
 自旋矩阵\eqref{eq:4}与众所周知的简谐振子坐标和动量矩阵之间的相似性是当前处理自旋波方法的起点。本章解释了这种方法如何被用于没有偶极修正\eqref{eq:2}的铁磁性情况。反铁磁性的情况将在第\ref{sec:7}-\ref{eq:8}章中进行讨论。
 
@@ -553,7 +553,7 @@ Q=(b/a)^{\frac{1}{2}}Q',~~P=(a/b)^{\frac{1}{2}}P',
 %%===========================================================
 %%===========================================================
 
-\section{反铁磁性的简谐近似} \label{sec:7}
+\section{反铁磁简谐近似} \label{sec:7}
 
 自旋系统低温性质的自旋波理论的出发点是自旋系统的基态：自旋波被引入是为了描述自旋系统对于基态的微小偏离。当我们想研究一个微小扰动的影响时，比如施加一个弱外场或者热能，自旋波理论只有在微扰下基态仍稳定的情况时才成立。这时，自旋系统对基态的偏离可以用一系列合适的简正模来帮助分析，正如第\ref{sec:3}章中对铁磁自旋系统解释的那样。如果微扰下基态不稳定，自旋波理论就失效了。这时，自旋系统对其初始状态的大偏离就不能用自旋波来描述，这种情况下自旋波理论的结果的是发散的。
 
@@ -570,39 +570,48 @@ Q=(b/a)^{\frac{1}{2}}Q',~~P=(a/b)^{\frac{1}{2}}P',
 \end{equation}
 其中$i$代表子晶格$1$中的原子，而$j$代表子晶格$2$中的原子；耦合常数$J$为正数。所谓两种子晶格的反铁磁状态，是指在子晶格$1$的自旋方向之间存在一定的长程顺序，在相反方向的子晶格$2$的自旋之间存在相似顺序的状态。完全各向同性时的哈密顿量\eqref{eq:78}对应的态是简并的，因为两个子晶格的反平行磁矩的共同方向是任意的。这种简并不能被外场消除。对于一个不太大的外场,自旋将反铁磁地布置在垂直于外部场的平面中，但是自旋在平面中的方向仍然是任意的。
 
-
+在任何真正的反铁磁晶体中，这种简并都可以通过各向异性消除，正如我们将看到的，在这里各向异性起着比在铁磁体中更重要的作用。各向异性必须再次被以一种等效各向异性场的形式引入，但是它和铁磁各向异性场是十分不同的。必须确保子晶格$1$中的自旋优先朝向$+z$方向，而子晶格$2$中的自旋优先朝向$-z$方向。这可以通过在子晶格$1$格点上引入一个指向$+z$方向，在子晶格$2$中指向$-z$方向的假想场$H_A$来实现。则哈密顿函数变成
 \begin{equation} \label{eq:79}
 \mathcal{H}=2J\sum\nolimits_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j-H_Ag\beta(\sum\nolimits_iS_{iz}-\sum\nolimits_jS_{jz}),
 \end{equation}
+其中$i$遍及子晶格$1$，而$j$遍及子晶格$2$，这是我们在这一章中都遵循的一个约定。在无限强各向异性场$H_A$的极限下，可以忽略\eqref{eq:79}式中的耦合项，而且\eqref{eq:79}式的基态是子晶格$1$中的所有自旋都指向$+z$方向以及子晶格$2$上的所有自旋都指向$-z$方向的状态。如果$H_A$是个有限值，只要$g\beta H_A$不比$J/N$小好几个数量级（其中$N$是晶体中的总原子数），则式\eqref{eq:79}的基态仅微弱的依赖于$H_A$的值。更准确地说，$g\beta H_A$必须比式\eqref{eq:78}的第一激发态和基态间$J/N$量级的能量差要大。（这对于一维晶体是不成立的。卡斯特林（Kasteleyn）已经表明，对于线性链，当各向异性变得小于某个有限临界值时，基态是无序的。这对于二维晶体可能也是成立的。）
 
+对于一个有限值的$N$和严格等于零的$H_A$，哈密顿量\eqref{eq:79}中的基态，即各向同性哈密顿量\eqref{eq:78}的基态，是未知的。幸运的是，这种状态没有物理意义，因为它不会出现在真实的反铁磁晶体中。一个有限值各向异性的基态是式\eqref{eq:78}的低级态的确定线性组合，我们就是将式\eqref{eq:78}态的这种确定线性组合称为反铁磁基态。对应于假设的两种子晶格结构，我们相应地定义了反铁磁基态，对于小$H_A$而言，其为式\eqref{eq:79}的极限基态，或者更确切地说，即当第一个$N$趋于无穷大$H_A$趋于零食的状态。如前所述，也正如下面详细展示的那样，这种状态和$H_A$取有限值时的基态并没有很大不同。特别地，它和$H_A$趋于无穷大是的完全有序状态也没有很大不同。这种完全有序状态被使用作为反铁磁自旋波理论的初始状态。引入反铁磁自旋波来描述自旋系统的状态与该完全有序状态的微小偏离，这是由于实际上$H_A$的值是有限的而不是无限的，以及应用了其他一些微扰引起的 例如一个弱外场或少量热能。如果自旋波理论给出了一个收敛的结果，假定的反铁磁序列至少对应于能量的相对最小值。这一结构是否也对应于绝对最小值还不能决定，除非和自旋间存在真正各向异性耦合的自旋系统的问题被解决了。
+
+在完全有序状态下，子晶格$1$中的所有自旋都指向$+z$方向，而子晶格$2$中的所有自旋都指向$-z$方向，即对于所有的$i$和$j$，有$S_{iz}=S$和$S_{jz}=-S$。如果$S_{iz}$不等于$S$，或者$S_{jz}$不等于$-S$，我们就说在原子$i$或者$j$处分别出现了一个自旋偏差。那么我们已经定义的反铁磁基态就只有相对较少的自旋偏差；对于一个简单立方格子，结果平均大概有$93\%$的原子上没有自旋偏差。这种状态因此可以被视作一个较好的自旋波理论的近似。总之，它在微扰下并不稳定，而且如果研究它对一个外场或者热能作用下自旋系统的状态的影响，引入一个有限的各向异性是十分必要的。各向异性在保证稳定性上非常有效；$g\beta H_A$并不一定要比微扰大，只要$g\beta(H_A H_E)^\frac{1}{2}$足够大就行了，其中$H_E$是外斯（Weiss）分子场。这里分子场通过各向异性作用引入，这正是相比于铁磁情况下，各向异性在这里更加重要的原因。典型的取值$H_A=10^2oe,~H_E=10^5oe$，所以一个$10^2oe$数量级的外场仍能视作一个微扰。只要微扰和$H_A$取有限值的事实导致的对完全有序态的偏离很小，自旋波理论可以令人满意地描述该微扰的影响。
+
+
+我们现在展示如何在反铁磁情况中分析引入简谐振子近似。当我们包含与平行外场$H_z=H$的相互作用，哈密顿量\eqref{eq:79}变成
 \begin{eqnarray} \label{eq:80}
 &&\mathcal{H}=2J\sum\nolinebreak_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j-(H+H_A)g\beta\sum\nolimits_iS_{iz}+\nonumber\\
 &&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-(H-H_A)g\beta\sum\nolimits_jS_{jz},
 \end{eqnarray}
-
+在完全有序状态下我们有$S_{iz}=S$和$S_{jz}=-S$，我们因此引入下面的自旋-偏差量子数
 \begin{equation} \label{eq:81}
 n_i=S-m_i,~~\text{和}~~n_j=S+m_j.
 \end{equation} 
-
+公式\eqref{eq:7}中对自旋变量的简谐振子近似必须被改写成
 \begin{eqnarray} 
 &&S_{ix}=S^{\frac{1}{2}}Q_i;~~S_{iy}=S^{\frac{1}{2}}P_i;~~S_{iz}=S-\tfrac{1}{2}(P_i^2+Q_i^2-1);\label{eq:82}\\
 &&S_{jx}=S^{\frac{1}{2}}Q_j;~~S_{iy}=-S^{\frac{1}{2}}P_j;~~S_{jz}=-S+\tfrac{1}{2}(P_j^2+Q_j^2-1).\label{eq:83}
 \end{eqnarray} 
-
+式\eqref{eq:82}和式\eqref{eq:83}中左手边的矩阵元等于$n_i$和$n_j$取$0$和$1$时右手边对应的矩阵元，即$m_i$等于$S$和$S-1$和$m_j$等于$-S$和$-S+1$的情况。当我将式\eqref{eq:82}和\eqref{eq:83}代入式\eqref{eq:80}的哈密顿量，我们可以得到
 \begin{eqnarray} \label{eq:84}
 &&\mathcal{H}=E_0'+2JS\sum\nolimits_{\mathit{nei}}(Q_iQ_j-P_iP_j)-2J\sum\nolimits_{\mathit{nei}}n_in_j\nonumber\\
 &&~~~~~~~~~~~~~~~~~~~~+[2JS_z+g\beta(H_A+H)]\sum\nolimits_in_i\nonumber\\
 &&~~~~~~~~~~~~~~~~~~~~~~~~~~~~+[2JS_z+g\beta(H_A=H)]\sum\nolimits_jn_j,
 \end{eqnarray}
-
+其中我们引入自旋偏差算符
 \begin{equation} \label{eq:85}
 n_i=\tfrac{1}{2}(P_i^2+Q_i^2-1)~~\text{和}~~n_j=\tfrac{1}{2}(P_j^2+Q_j^2-1),
 \end{equation}	
-
+而且其中的$E_0'$等于
 \begin{equation} \label{eq:86}
 E_0'=-NzJS^2-H_Ag\beta NS.
 \end{equation}
+简谐振子系统\eqref{eq:84}的性质和式\eqref{eq:80}的性质是一样的，只要谐振子$n\geqslant 2$的态没有被显著激发。足够大的$H_A$值正是这种情况。然而当$H_A$较小时，式\eqref{eq:84}仍是一个好的近似。
 
+除了式\eqref{eq:82}和\eqref{eq:83}中用谐振子变量代替自旋变量的近似之外，我们还必须忽略由\eqref{eq:84}式中四次项表示的自旋偏差间的吸引相互作用。当我们做了这些简化后，可以通过引入合适的简正模来对角化哈密顿量。我们首先分别引入子晶格$1$和$2$的行波
 \begin{equation} \label{eq:87}
 \left\{
 \begin{array}{l}
@@ -620,19 +629,18 @@ P_{2k}=(2/N)^{\frac{1}{2}}\sum\nolimits_j\exp(i\mathbf{k}\cdot\mathbf{r}_j)P_j.
 \end{array}
 \right.
 \end{equation}
-
+波矢$\mathbf{k}$可以取边界条件允许的$\tfrac{1}{2}N$个不同值，以保证我们有正确的变量数。用这些变量表示哈密顿量得
 \begin{eqnarray} \label{eq:89}
 &&\mathcal{H}=E_0'+\sum\nolimits_k\{[2JSz+g\beta(H_A+H)]\nonumber\\
 &&~~~~~~\times\tfrac{1}{2}(P_{1k}P_{1-k}+Q_{1k}Q_{1-k}-1)\nonumber\\
 &&~~~~~~+[2JSz+g\beta(H_A-H)]\tfrac{1}{2}(P_{2k}P_{2-k}+Q_{2k}Q_{2-k}-1)\nonumber\\
 &&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+2JS\gamma_k(Q_{1k}Q_{2k}-P_{1k}P_{2k})\}.
 \end{eqnarray}
-
-
+其中$\gamma_k$由下式给出
 \begin{equation} \label{eq:90}
 \gamma_k=z^{-1}\sum\nolimits_a\cos(\mathbf{k}\cdot\mathbf{a}),
 \end{equation}
-
+其中求和遍及$z$个连接原子和其$z$个最近邻原子的矢量$\mathbf{a}$。通过一个线性变换（参见参考文献 7 和 40）
 \begin{equation} \label{eq:91}
 \begin{array}{l}
 \left\{
@@ -649,28 +657,28 @@ P_{2-k}=-c_{2k}P_{1k}'+c_{1k}P_{2-k}',
 \right.
 \end{array}
 \end{equation}
-
+其中$c_{1k}=c_{1-k},~c_{2k}=c_{2-k}$和$c_{1k}^2-c_{2k}^2=1$，我们可以消去式\eqref{eq:89}中的交叉项。当我们将式\eqref{eq:91}带入式\eqref{eq:89}的哈密顿量中，我们可以发现交叉项消失了如果系数$c_{ik}$有如下值
 \begin{equation} \label{eq:92}
 c_{1k}=\rho_k/(\rho_k^2-\gamma_k^2)^\frac{1}{2};~~c_{2k}=-\gamma_k/(\rho_k^2-\gamma_k^2)^\frac{1}{2},
 \end{equation}
-
+其中$\gamma_k$由\eqref{eq:90}式给出，而$\rho_k$由下式定义
 \begin{equation} \label{eq:93}
 \rho_k=1+H_A/H_E+[(1+H_A/H_E)^2-\gamma_k^2]^\frac{1}{2}.
 \end{equation}
-
+其中量$H_E$由下式给出
 \begin{equation*}
 H_E=2JSz/g\beta,
 \end{equation*}
-
+这就是完全有序态下的外斯分子场。用撇上标的变量可以表示标准形式的哈密顿量为
 \begin{eqnarray} \label{eq:94}
 &&\mathcal{H}=E_0+\sum\nolimits_k\tfrac{1}{2}(P_{1k}'P_{1-k}'+Q_{1k}'Q_{1-k}'-1)\hslash\omega_{1k}\nonumber\\
 &&~~~~~~~~~~~~~~~~~~~~+\sum\nolimits_k\tfrac{1}{2}(P_{2k}'P_{2-k}'+Q_{2k}'Q_{2-k}'-1)\hslash\omega_{2k}.
 \end{eqnarray}
-
+所以本征值由下式给出
 \begin{equation} \label{eq:95}
 E(\mathfrak{n}_{1k},\mathfrak{n}_{2k})=E_0+\sum\nolimits_k(\mathfrak{n}_{1k}\hslash\omega_{1k}+\mathfrak{n}_{2k}\hslash\omega_{2k}),
 \end{equation}
-
+其中$\mathfrak{n}_{1k}$和$\mathfrak{n}_{2k}$取值为$0,~1,~2,~\cdots$。简正自旋波模的频率由下式给出
 \begin{equation} \label{eq:96}
 \left\{
 \begin{array}{l}
@@ -679,15 +687,21 @@ E(\mathfrak{n}_{1k},\mathfrak{n}_{2k})=E_0+\sum\nolimits_k(\mathfrak{n}_{1k}\hsl
 \end{array}
 \right.
 \end{equation}
-
+而基态能量$E_0$等于
 \begin{equation} \label{eq:97}
 E_0=E_0'+\tfrac{1}{2}\sum\nolimits_k(\hslash\omega_{1k}+\hslash\omega_{2k}),
 \end{equation}
+其中$E_0'$由\eqref{eq:86}式给出。
 
+正如我们可以从式\eqref{eq:96}中看出的那样，简正模的两个分支在$H=0$时相同。关于这些自旋波模式的详细的讨论和经典解释由凯弗（Keffer），卡普兰（Kaplan）和雅菲特（Yafet）给出。从式\eqref{eq:96}中我们还可以看出，因为$\gamma_k^2\leqslant 1$，模式$2,~0$有最小的激发能，即
 \begin{equation} \label{eq:98}
 \hslash\omega_{20}=g\beta(H_c-H);~~H_c=[H_A(H_A+2H_E)]^\frac{1}{2}.
 \end{equation}
+当$H$大于等于临界值$H_c$时，甚至在绝对零度时简谐振子近似都显然失效了，因为模式$2,~0$将被激发到一个任意高的能级。这对应于一个众所周知的事实，当平行场$H$超过临界值$H_c$时，自旋转向垂直于$H$的方向。这导致的自旋系统状态的大幅变化不能用自旋波近似来描述，并且该理论中出现了发散。但是至少在绝对零度时，临界场的值由式\eqref{eq:98}正确给出。
 
+垂直外场的情况可以用相似的方法处理（参见，比如说库博（Kubo）的文章）。式\eqref{eq:96}和\eqref{eq:97}中的结果和相应的垂直外场情况的结果可以被用于计算平行和垂直磁化系数。反铁磁体的比热将在第\ref{sec:9}章与铁磁体相联系一起讨论。
+
+至于反铁磁共振吸收，在第\ref{sec:6}章中铁磁情况下振荡磁场只能激发$\mathbf{k}=0$的自旋波模式，我们可以用相同的方法来讨论。从式\eqref{eq:96}我们可以看出对于一个平行外场，共振频率由下式给出
 \begin{equation} \label{eq:99}
 \left\{
 \begin{array}{l}
@@ -696,6 +710,8 @@ E_0=E_0'+\tfrac{1}{2}\sum\nolimits_k(\hslash\omega_{1k}+\hslash\omega_{2k}),
 \end{array}
 \right.
 \end{equation}
+展示出各向异性在共振现象中扮演着十分重要的角色。垂直情况下的频率可以用相似的方法推导。更多反铁磁共振的自旋波理论可以在参考文献中找到。公式\eqref{eq:99}中的反铁磁共振频率最早由基特尔（Kittel）给出。
+
 
 
 %%===========================================================
@@ -703,47 +719,58 @@ E_0=E_0'+\tfrac{1}{2}\sum\nolimits_k(\hslash\omega_{1k}+\hslash\omega_{2k}),
 
 \section{自旋波近似下的反铁磁基态} \label{sec:8}
 
+我们现在将讨论第\ref{sec:7}中定义的二子晶格模型下的反铁磁基态。这是式\eqref{eq:79}中哈密顿量的最低态，代表了近邻自旋间的各向同性相互作用和与假定的两个子晶格结构相对应的交错各向异性场$H_A$中的自旋各向异性能。特别的，对于$H_A\rightarrow 0$时式\eqref{eq:79}的基态和$H_A\rightarrow\infty$下的完全有序态的差别不大，完全有序态下子晶格$1$中所有自旋指向$N$，子晶格$2$中的自旋指向$S$。
+
+在自旋波近似中，哈密顿量\eqref{eq:79}被式\eqref{eq:82}和\eqref{eq:83}中给出的坐标和动量$Q_i,~P_i$描述的简谐振子系统代替。在第\ref{sec:7}章中，该耦合谐振子系统的一系列近似简振模由式\eqref{eq:87}，\eqref{eq:88}和\eqref{eq:91}中的变换给出。在这些变量的项中，如果我们忽略谐振子系统哈密顿量\eqref{eq:84}中的四次项，哈密顿量就会变成式\eqref{eq:94}中的标准形式。在没有外场时，简正模的频率都是正数，正如\eqref{eq:96}式取$H=0$时那样。谐振子系统基态下的简正模都没有被激发，也就是说所有的$\mathfrak{n}_{1k}$和$\mathfrak{n}_{2k}$都消失了。然而，这并不意味着所有代替单个自旋系统中自旋的，最初的解耦谐振子都必须处于最低态。这对于$H_A\rightarrow\infty$是成立的，对应于完全有序态。然而对于一个有限的$H_A$特别是当$H_A=0$时，存在一个不为零的$p_n$，代表一个给定谐振子在其第$n$激发态的概率，我们现在将给出它的计算。只要当$n\geqslant 1$时$p_n$远小于一，则$n=0,~1,~\cdots,~2S$时的$p_n$近似等于，在最初自旋系统的基态下，在一个给定原子处找到$n$个自旋偏差的概率，因为在$p_n\leqslant 1$的条件下，对于$n\geqslant 1$的谐振子系统的性质近似于自旋系统的性质。当然，在谐振子系统中的$p_n$对所有$n$值都有意义。
+
+为了计算概率$p_n$关于各向异性场$H_A$的函数，引入产生和湮灭算符可以方便计算。对于式\eqref{eq:91}中的自旋波模式，这些算符由下式定义
 \begin{equation} \label{eq:100}
 A_{1k}=2^{-\frac{1}{2}}(Q_{1k}'+iP_{1-k}');~~A_{1k}^*=2^{-\frac{1}{2}}(Q_{1-k}'-iP_{1k}'),
 \end{equation}
-
+对于模式$2k$也是类似的。对应于原子$i$上的自旋偏差数的自旋偏差算符$n_i$，通过式\eqref{eq:87}，\eqref{eq:88}和\eqref{eq:91}中的变换可以用\eqref{eq:100}式中的算符来表示。其结果为
 \begin{equation} \label{eq:101}
 n_i=(2/N)\sum\nolimits_{k,k'}\exp[i(\mathbf{k}'-\mathbf{k})\cdot\mathbf{r}_i]B_{k'}^*B_k,
 \end{equation}
-
+其中
 \begin{equation} \label{eq:102}
 B_k=c_{1k}A_{1k}+c_{2k}A_{2k}^*.
 \end{equation}
-
+此时基态$\psi_0$由下式表征
+\[
+A_{1k}\psi_0=0,~~A_{2k}\psi_0=0,
+\]
+基态$\psi_0$下$n_i$的期望值并不依赖与$i$并等于
 \begin{equation} \label{eq:103}
 \braket{n_i}=(2/N)\sum\nolimits_i\braket{n_i}=(2/N)\sum\nolimits_k\braket{B_k^*B^*},
 \end{equation}
-
+其中求和遍及$i$所属子晶格中的所有原子。$B_k^*B_k$中只有一项会对期望值产生不为零的贡献，即$A_{2k}A_{2k}^*$，所以我们有
 \begin{equation} \label{eq:104}
 \braket{n_i}=(2/N)\sum\nolimits_kc_{2k}^2=\Gamma(1+H_A/H_E),
 \end{equation}
-
+其中$\Gamma(x)$函数由下式定义
 \begin{equation} \label{eq:105}
 \Gamma(x)=(2/N)^\frac{1}{2}\sum\nolimits_k\tfrac{1}{2}[(1-\gamma_k^2/x)^{-\frac{1}{2}}-1],
 \end{equation}
+而$\gamma_k$由\eqref{eq:90}式给出。
 
+相似地，我们可以计算$n^i$高次项的期望值。比如$n_i^2$我们可以得到
 \begin{eqnarray} \label{eq:106}
 &&\braket{n_i^2}=(2/N)^2\sum\nolimits_{k,k'}\sum\nolimits_{l,l'}\delta(k+l-k'-l')\nonumber\\
 &&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\times\braket{B_{k'}^*B_kB_{l'}^*B_l}.
 \end{eqnarray}
-
+此致有两个不为零的项，所以结果为
 \begin{equation} \label{eq:107}
 \braket{n_i^2}=\Gamma+2\Gamma^2,
 \end{equation}
-
+其中用到了关系式$c_{1k}^2=1+c_{2k}^2$。最后，我们计算了$\braket{n_i^3}$。此时存在六个不为零的项，即
 \begin{equation} \label{eq:108}
 \braket{n_i^3}=\Gamma+6\Gamma^2+5\Gamma^3.
 \end{equation}
-
+期望值$\braket{n_i^m}$和概率值$p_n$的关系由下面的公式给出
 \begin{equation} \label{eq:109}
 \braket{n_i^m}=p_1+2^mp_2+3^mp_3+\cdots,
 \end{equation}
-
+因此我们得到了下面一系列关于$p_n$的方程：
 \begin{equation} \label{eq:110}
 \left\{
 \begin{array}{l}
@@ -755,7 +782,7 @@ p_0+p_1+p_2+p_3+\cdots=1;\\
 \end{array}
 \right.
 \end{equation}
-
+通过将$\Gamma$视为小量进一步近似，我们可以解除该方程组。只考虑到$\Gamma$的三次项，我们可以得到
 \begin{equation} \label{eq:111}
 \left\{
 \begin{array}{l}
@@ -766,52 +793,65 @@ p_3=(5/6)\Gamma^3.
 \end{array}
 \right.
 \end{equation}
-
+从式\eqref{eq:105}我们可以看出当$H_A\rightarrow\infty$时我们有$\Gamma\rightarrow 0$，因此$p_0=1,~p_1=p_2=\cdots=0$，证明了当各向异性很强时，基态接近于完全有序态。对于$H_A\rightarrow 0$，$\Gamma$趋于一个有限值，安德森（Anderson）用积分项$J_D$来表示：
 \begin{equation*}
 \Gamma(1)=\tfrac{1}{2}(J_D-1),
 \end{equation*}
-
+其中$D$是晶格维度。对于一个 3 维简单立方格子我们可以得到$\Gamma(1)=0.078$，对应于下面的$p_n$值：
 \begin{equation} \label{eq:112}
-p_0=0.93~~p_1=0.06;~~p_2=0.01.
+p_0=0.93;~~p_1=0.06;~~p_2=0.01.
 \end{equation}
+从这些值可以看出，$H_A\rightarrow 0$时的基态和完全有序态差别并不大，这一结果证明了对反铁磁基态使用自旋波近似的合理性，甚至在近似最差的$S=\tfrac{1}{2}$情况下也是合理的。
+
+式\eqref{eq:112}中给出的$p_n$值是与自旋量子数$S$无关的，因为量$\Gamma(1)$仅依赖于晶格结构。因为只有最开始几个$p_n$值明显不等于$0$，所以在经典极限$S\rightarrow\infty$下，自旋是完全排成一列的甚至在没有各向异性的情况下。当然也应该如此，因为众所周知在经典自旋算符的表示下，完全有序态是能量最低的态。对于一个有限值$S$，基态能量可以用式\eqref{eq:96}和\eqref{eq:97}计算。更对细节请参看安德森（Anderson）和库博（Kubo）的论文。
+
+最后，自旋波理论与反铁磁性有关的重大作用是，对于各种作者所使用的半现象学模型（其中一个子晶格上的自旋指向$N$，另一子晶格上的自旋指向$S$），真的存在一定的基础。式\eqref{eq:112}中的结果展示，也就是说这个模型的只有大概$7\%$的误差。沙尔（Shull）和斯马特（Smart）的中子衍射实验明确证明了联锁子晶格模型在物理上是真是存在的。尽管如此，它保证了被理论预言的结果是相同的。令人担心的是，尽管两个子晶格的总旋转都是非对角的，但它们的总和是对角的，但联锁结构可能会被非对角的微扰完全破坏。也可以提出这样的反对意见，即没有办法确定哪个子晶格点$N$和$S$，而不是相反。实际上，存在一个量子力学共振效应，因此两个排列彼此互换。然而对于任何宏观尺寸的晶体来说，这几乎是一个地质学上的缓慢性过程，因为共振仅是由于微扰理论运用于晶格中原子数$N$的结果。因此，对于所有意图和目的，像重分子的异构形式一样，将一种自旋类型分配给一个子晶格，将一种自旋类型分配给另一子晶格的安排可以认为是稳定的。
+
 
 
 %%===========================================================
 %%===========================================================
 
-\section{铁氧体的简谐近似} \label{sec:9}
+\section{亚铁磁简谐近似} \label{sec:9}
 
+过去十年磁学的杰出发展之一是亚铁磁性概念的发展和成果。亚铁磁介质的概念是奈尔（N\'eel）提出的；它与反铁磁材料的不同之处在于，两个子晶格的磁矩是不相等的，这是自旋，$g$因子或格点数不相等的结果，因此即使两个子晶格排列反平行，晶体的合成磁矩也不为零。前几章的自旋波理论可以很容易地被应用到亚铁磁介质上，其中两个子晶格有相同的原子数，而且唯一重要的耦合存在于位于不同子晶格的近邻原子间。真实的亚铁磁介质通常包括更加复杂的几何结构和除了最近邻原子间的原子相互作用。存在同一子晶格自旋耦合的情况下的自旋波理论由卡普兰（Kaplan）给出。然而通过简化模型，只需小小修改一下前几章中的计算结果。
 
+为了对比真正的反铁磁情况，我们不能再假设两个子晶格有相同的$g$因子，自旋和各向异性场。作为方程\eqref{eq:80}和\eqref{eq:81}的代替，我们现在有
 \begin{eqnarray} \label{eq:113}
 &&\mathcal{H}=2J\sum\nolimits_{\mathit{nei}}\mathbf{S}_i\cdot\mathbf{S}_j-(H+H_{A1})g_1\beta\sum\nolimits_iS_{iz}\nonumber\\
 &&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-(H-H_{A2})g_2\beta\sum\nolimits_jS_{jz}
 \end{eqnarray}
-
+和
 \begin{equation} \label{eq:114}
 n_i=S_1-m_i,~~n_j=S_2+m_j.
 \end{equation} 
-
+我们分别用$S_1$和$S_2$代替式\eqref{eq:82}和\eqref{eq:83}中的$S$，并引入合适的简谐振子变量去代替自旋变量。不同于式\eqref{eq:84}，现在谐振子系统的哈密顿函数是
 \begin{eqnarray} \label{eq:115}
 &&\mathcal{H}=E_0''+2J(S_1S_2)^\frac{1}{2}\sum\nolimits_{\mathit{nei}}(Q_iQ_j-P_iP_j)-2J\sum\nolimits_\mathit{nei}n_in_j\nonumber\\
 &&~~~~~~~~~~~~~~~~~+[2JS_2z+g_1\beta(H+H_{A1})]\sum\nolimits_in_i\nonumber\\
 &&~~~~~~~~~~~~~~~~~~~~~~+[2JS_1z+g_2\beta(H-H_{A2})]\sum\nolimits_jn_j,
 \end{eqnarray}
-
+其中
 \begin{eqnarray} \label{eq:116}
 &&E_0''=-NzJS_1S_2-N(g_1S_1-g_2S_2)\beta H+\nonumber\\
 &&~~~~~~~~~~~~~~~~~~~~~~~~~~~~-Ng_1S_1\beta H_{A1}-Ng_2S_2\beta H_{A2}.
 \end{eqnarray}
-
+表达式\eqref{eq:115}和\eqref{eq:84}有着完全一样的结构;唯一的不同是系数不一样，而常亮\eqref{eq:116}现在包含一个和外场成正比的项。因此通过和我们在第\ref{sec:7}章使用过的基本一样的变换，哈密顿函数\eqref{eq:115}可以被化简为平方和的形式。当考虑到常数的新值，简正模的频率表达式变成
 \begin{eqnarray} \label{eq:117}
 &&\hslash\omega_{1k},\hslash\omega_{2k}\nonumber\\
 &&~~~=\{[J(S_1+S_2)z+(K_1+K_2)+\tfrac{1}{2}(g_1-g_2)\beta H]^2\nonumber\\
 &&~~~~~~~-4J^2z^2S_1S_2\gamma_k^2\}^\frac{1}{2}\pm[j(S_2-S_1)z\nonumber\\
 &&~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+\tfrac{1}{2}(g_1+g_2)\beta H+(K_1-K_2)],
 \end{eqnarray}
-
+而非式\eqref{eq:96}，其中$+$号对应股$\omega_{1k}$而$-$号对应于$\omega_{2k}$。这里$\gamma_k$的定义由\eqref{eq:90}式给出。根据推导出式\eqref{eq:117}的库维尔（Kouvel）和布鲁克斯（Brooks），我们使用缩写
 \begin{equation} \label{eq:118}
 K_1=\tfrac{1}{2}g_1\beta H_{A1};~~K_2=\tfrac{1}{2}g_2\beta H_{A2}.
 \end{equation}
+对于本征值而言，公式\eqref{eq:95}中的附加常数的表达式\eqref{eq:97}现在取$E_0''$而非$E_0'$。表达式$K_1$和$K_2$可以被视作两种子晶格的等效各向异性常数。[公式\eqref{eq:82}给出形如$K_iS_i\times\sin^2(\mathbf{S}_i,z)=K_iS_i^{-1}(S_{ix}^2+S_{iy}^2)$的等效各向异性能，正如前面的修改那样，除了一个附加常数外便与$K_i\tfrac{1}{2}(P_i^2+Q_i^2-1)=K_in_i$一样，所以可以用式\eqref{eq:115}中的$H_{Ai}$项修正。]
+
+亚铁磁共振吸收频率的公式对应于完全对称模式$\mathbf{k}=0$时的频率，因此可以通过式\eqref{eq:117}取$\gamma_k=1$得到。这样得到的公式比最初由基特尔（Kittel）给出的更加普遍，因为他假设了两个子晶格有相等的交换作用场和各向异性场。然而我们的计算还是太特例了，因为我们假设了外场平行于各向异性场。对于任意方向，这种假设是不真实的，而且我们理论中最有趣的部分就是对方向的依赖性。更加普遍的情况被望休斯（Wangsness）等人考虑过。共振频率直接从运动方程推导出，但是无疑地，自旋波理论也可以做到。望休斯（Wangsness）表明，如果分子场系数和净磁化强度的乘积远大于施加的外场和各向异性场，亚铁磁材料共振频率的表达式就可以简化为普通铁磁介质的表达式。
+
+
 
 \begin{equation} \label{eq:119}
 \hslash\omega_{1k}=\frac{g_1S_1-g_2S_2}{S_1-S_2}\beta H+\frac{2JS_1S_2}{S_1-S_2}\sum\nolimits_aa^2k^2\cos\theta_{k,a}.
